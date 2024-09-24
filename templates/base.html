@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>PolyQuity</title>
+    <link href="{{ get_url(path='main.css') }}" rel="stylesheet" />
+    <script src="{{ get_url(path='main.js') }}" defer></script>
+
+    {% block head %}
+    {% endblock head %}
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>
+          <a href="{{ get_url(path='.', lang=lang) }}">
+            <!-- TODO logo -->
+            PolyQuity
+          </a>
+        </h1>
+        <button id="navbar-toggle"
+                type="button"
+                class="fa-solid fa-bars"
+                aria-label="toggle navigation menu"
+                aria-expanded="false">
+          <div id="navbar-menu">
+            {% for section_name in ["events", "support"] %}
+              {% set section = get_section(path=section_name ~ '/_index.md', lang=lang) %}
+              <a href="{{ section.path }}">{{ section.title }}</a>
+            {% endfor %}
+          </div>
+        </button>
+      </nav>
+    </header>
+    <main>
+
+      {% block content %}
+      {% endblock content %}
+    </main>
+  </body>
+</html>

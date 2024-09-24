@@ -1,0 +1,25 @@
+{% import "macros.html" as macros %}
+
+{% extends "base.html" %}
+
+{% block content %}
+  {% set events = get_section(path="events/_index.md", lang=lang) %}
+  <h2>
+    <a href="{{ events.path }}">{{ events.title }}</a>
+  </h2>
+  {% set event = events.pages | first %}
+  {{ macros::event_card(event=event) }}
+  <h1>Blog</h1>
+  {% set support = get_section(path="support/_index.md", lang=lang) %}
+  <h2>
+    <a href="{{ support.path }}">{{ support.title }}</a>
+  </h2>
+  <p>{{ support.description }}</p>
+  <h2>Nous trouver</h2>
+  <span>
+    <a class="fa-brands fa-youtube"
+       href="https://www.youtube.com/channel/UCKIm2MkfTj2Q40xuf4E05Qg"></a>
+  </span>
+  <!-- insta -->
+  <!-- FB? -->
+{% endblock content %}

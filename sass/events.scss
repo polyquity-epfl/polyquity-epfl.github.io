@@ -1,0 +1,11 @@
+main {
+  display: flex;
+  flex-direction: column;
+}
+main > :first-child {
+  margin-top: 1rem;
+}
+main > * {
+  margin: 0;
+  margin-bottom: 1rem;
+}

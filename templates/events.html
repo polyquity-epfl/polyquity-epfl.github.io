@@ -1,0 +1,12 @@
+{% import "macros.html" as macros %}
+
+{% extends "base.html" %}
+
+{% block head %}
+  <link href="{{ get_url(path='events.css') }}" rel="stylesheet" />
+{% endblock head %}
+
+{% block content %}
+  <h2>{{ section.title | capitalize }}</h2>
+  {% for event in section.pages %}{{ macros::event_card(event=event) }}{% endfor %}
+{% endblock content %}

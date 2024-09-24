@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>{{ page.title }}</h2>
+  <p>
+    {% set start_time = page.extra | get(key="start") | date(format="%T") %}
+    {% set format = "%x" %}
+    {% if start_time != "00:00:00" %}
+      {% set format = format ~ " %R" %}
+    {% endif %}
+    {{ page.extra | get(key="start") | date(format=format) }}
+    {% if page.extra is containing("end") %}
+      –
+      {{ page.extra | get(key="end") | date(format=format) }}
+    {% endif %}
+  </p>
+  {{ page.content | safe }}
+{% endblock content %}

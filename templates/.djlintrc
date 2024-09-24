@@ -1,0 +1,5 @@
+{
+  "blank_line_after_tag": "extends,import",
+  "blank_line_before_tag": "block",
+  "indent": 2
+}

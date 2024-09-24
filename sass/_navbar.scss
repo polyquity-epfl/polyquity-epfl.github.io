@@ -1,0 +1,57 @@
+@import "./_theme.scss";
+
+$margin-size: 0.5rem;
+
+body > header {
+  background-color: $theme-dark;
+}
+
+$navbar-height: 50px;
+body > header > nav {
+  position: sticky;
+  height: $navbar-height;
+  margin: auto $margin-size;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#navbar-toggle {
+  height: calc(100% - 2 * $margin-size);
+}
+
+#navbar-toggle[aria-expanded="false"] > #navbar-menu {
+  display: none;
+}
+#navbar-menu {
+  position: fixed;
+  top: $navbar-height;
+  left: 0;
+  right: 0;
+
+  margin: 2rem 2rem;
+  border: $theme-border-size solid $theme-contrast;
+  border-radius: 1rem;
+  background-color: $theme-dark;
+
+  display: flex;
+  flex-direction: column;
+
+  /* font takes from button, let's revert */
+  font-family: sans-serif;
+  font-size: x-large;
+  font-variant: all-small-caps;
+
+  * {
+    margin: auto 2rem;
+    padding: 1.5rem;
+
+    border: thin;
+    border-bottom-style: solid;
+  }
+  *:last-child {
+    border-bottom-style: unset;
+  }
+}
