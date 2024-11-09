@@ -1,18 +1,25 @@
 {% extends "base.html" %}
 
+{% block head %}
+  <link href="{{ get_url(path='event.css') }}" rel="stylesheet" />
+{% endblock head %}
+
 {% block content %}
   <h2>{{ page.title }}</h2>
-  <p>
-    {% set start_time = page.extra | get(key="start") | date(format="%T") %}
-    {% set format = "%x" %}
-    {% if start_time != "00:00:00" %}
-      {% set format = format ~ " %R" %}
-    {% endif %}
-    {{ page.extra | get(key="start") | date(format=format) }}
-    {% if page.extra is containing("end") %}
-      –
-      {{ page.extra | get(key="end") | date(format=format) }}
-    {% endif %}
+  <p id="event-info">
+    <span>
+      {% set start_time = page.extra | get(key="start") | date(format="%T") %}
+      {% set format = "%x" %}
+      {% if start_time != "00:00:00" %}
+        {% set format = format ~ " %R" %}
+      {% endif %}
+      {{ page.extra | get(key="start") | date(format=format) }}
+      {% if page.extra is containing("end") %}
+        –
+        {{ page.extra | get(key="end") | date(format=format) }}
+      {% endif %}
+    </span>
+    <span>{{ page.extra | get(key="location") }}</span>
   </p>
   {{ page.content | safe }}
 {% endblock content %}
