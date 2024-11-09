@@ -1,6 +1,3 @@
 base_url = "https://polyquity-epfl.github.io"
 
 compile_sass = true
-
-default_language = "fr"
-[languages.en]
