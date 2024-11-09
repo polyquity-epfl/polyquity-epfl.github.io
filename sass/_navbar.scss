@@ -43,15 +43,20 @@ body > header > nav {
   font-family: sans-serif;
   font-size: x-large;
   font-variant: all-small-caps;
+}
+#navbar-menu > * {
+  margin: auto 2rem;
+  padding: 1.5rem;
 
-  * {
-    margin: auto 2rem;
-    padding: 1.5rem;
+  border: thin;
+  border-bottom-style: solid;
+}
+#navbar-menu > *:last-child {
+  border-bottom-style: unset;
+}
 
-    border: thin;
-    border-bottom-style: solid;
-  }
-  *:last-child {
-    border-bottom-style: unset;
-  }
+#navbar-icons > * {
+  margin: auto 1rem;
+  /* webkit likes to style links */
+  text-decoration: unset;
 }
