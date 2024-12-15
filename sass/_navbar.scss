@@ -55,8 +55,13 @@ body > header > nav {
   border-bottom-style: unset;
 }
 
+#navbar-icons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 1em;
+}
 #navbar-icons > * {
-  margin: auto 1rem;
   /* webkit likes to style links */
   text-decoration: unset;
 }
