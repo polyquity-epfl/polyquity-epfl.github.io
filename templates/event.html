@@ -7,19 +7,20 @@
 {% block content %}
   <h2>{{ page.title }}</h2>
   <p id="event-info">
-    <span>
-      {% set start_time = page.extra | get(key="start") | date(format="%T") %}
-      {% set format = "%x" %}
-      {% if start_time != "00:00:00" %}
-        {% set format = format ~ " %R" %}
-      {% endif %}
-      {{ page.extra | get(key="start") | date(format=format) }}
-      {% if page.extra is containing("end") %}
-        –
-        {{ page.extra | get(key="end") | date(format=format) }}
-      {% endif %}
-    </span>
-    <span>{{ page.extra | get(key="location") }}</span>
-  </p>
-  {{ page.content | safe }}
+    {% set start = page.extra | get(key="start") %}
+    {% set start_time = start | date(format="%T") %}
+    {% set format = "%x" %}
+    {% if start_time != "00:00:00" %}
+      {% set format = format ~ " %R" %}
+    {% endif %}
+    <time datetime="{{ start }}"> {{ start | date(format=format) }} </time>
+    {% if page.extra is containing("end") %}
+      {% set end = page.extra | get(key="end") %}
+      –
+      <time datetime="{{ end }}"> {{ end | date(format=format) }} </time>
+    {% endif %}
+  </span>
+  <span>{{ page.extra | get(key="location") }}</span>
+</p>
+{{ page.content | safe }}
 {% endblock content %}
