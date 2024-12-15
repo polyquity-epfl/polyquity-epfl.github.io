@@ -9,11 +9,15 @@
   </h2>
   {% set event = events.pages | first %}
   {{ macros::event_card(event=event) }}
-  <h1>Blog</h1>
-  {% set support = get_section(path="support/_index.md", lang=lang) %}
+  {% set blog = get_section(path="blog/_index.md", lang=lang) %}
   <h2>
-    <a href="{{ support.path }}">{{ support.title }}</a>
+    <a href="{{ blog.path }}">{{ blog.title }}</a>
   </h2>
-  <p>{{ support.description }}</p>
-  <h2>Nous trouver</h2>
+  {% for section_name in ["support", "paye-ton-epfl"] %}
+    {% set section = get_section(path=section_name ~ "/_index.md", lang=lang) %}
+    <h2>
+      <a href="{{ section.path }}">{{ section.title }}</a>
+    </h2>
+    <p>{{ section.description }}</p>
+  {% endfor %}
 {% endblock content %}
