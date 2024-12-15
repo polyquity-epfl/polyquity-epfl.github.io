@@ -31,9 +31,13 @@ body {
 main {
   margin: auto 1rem;
 }
-main > :is(p,h2) {
+main > h2 {
+  margin-top: 1.5rem;
+}
+main > :is(p,h2,h3,h4) {
   background-color: $theme-dark;
   padding: $theme-text-padding-size;
+  margin-bottom: 0.5em;
 }
 
 .event-card {
