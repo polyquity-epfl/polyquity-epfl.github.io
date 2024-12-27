@@ -1,32 +1,46 @@
 name: publish
+
 on:
   push:
     branches: [main]
+  pull_request:
+
+env:
+  BASE_URL: "https://polyquity-epfl.github.io/"
+  SUB_PATH: ${{ github.ref == 'refs/heads/main' && '.' || '.previews/${{ github.event.number }}/" }}
 
 jobs:
-  build:
+  check-build-and-deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - uses: actions/checkout@v4
       - uses: taiki-e/install-action@v2
         with:
           tool: zola
+
+      - run: zola check
+
       - run: make
-      - run: zola build
-      - uses: actions/upload-pages-artifact@v3
+      - run: zola build --base-url "${{ env.BASE_URL }}"
+
+      - uses: peaceiris/actions-gh-pages@v3
         with:
-          path: public
-  publish:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          destination_dir: ${{ env.SUB_PATH }}
+          # TODO add cname of custom domain
+
+      - uses: hasura/comment-progress@v2
+        if: github.ref != 'refs/heads/main'
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          number: ${{ github.event.number }}
+          id: deploy-preview
+          message: |
+            ✨ Website successfully built ✨
+            Preview can be seen here: ${{ env.BASE_URL }}
