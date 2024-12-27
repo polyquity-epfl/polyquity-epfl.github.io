@@ -18,14 +18,11 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - uses: actions/checkout@v4
-      - uses: taiki-e/install-action@v2
-        with:
-          tool: zola
-
-      - run: zola check
 
       - run: make
-      - run: zola build --base-url "${{ env.BASE_URL }}"
+      - uses: zolacti/on@build
+        with:
+          base-url: ${{ env.BASE_URL }}
 
       - uses: peaceiris/actions-gh-pages@v3
         with:
