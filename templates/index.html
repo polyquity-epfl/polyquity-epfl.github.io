@@ -13,11 +13,11 @@
   <h2>
     <a href="{{ blog.path }}">{{ blog.title }}</a>
   </h2>
-  {% for section_name in ["support", "paye-ton-epfl"] %}
-    {% set section = get_section(path=section_name ~ "/_index.md", lang=lang) %}
+  {% for page_name in ["support", "paye-ton-epfl"] %}
+    {% set section = get_page(path=page_name ~ ".md", lang=lang) %}
     <h2>
       <a href="{{ section.path }}">{{ section.title }}</a>
     </h2>
-    <p>{{ section.description }}</p>
+    {{ section.summary | safe }}
   {% endfor %}
 {% endblock content %}

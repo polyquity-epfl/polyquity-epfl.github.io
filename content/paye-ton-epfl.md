@@ -1,9 +1,12 @@
 +++
 title = "Paye ton EPFL"
-description = "Dénonce le sexisme, LGBTQIA+-phobia, racisme et violence à l'EPFL"
 
-template = "paye-ton-epfl.html"
+template = "single-page.html"
 +++
+
+Dénonce le sexisme, LGBTQIA+-phobia, racisme et violence à l'EPFL.
+
+<!-- more -->
 
 Témoigner via
 [notre formulaire](https://framaforms.org/temoignages-sensibilisation-polyquity-1607092769)
