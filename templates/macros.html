@@ -1,15 +1,12 @@
 {% macro event_card(event) %}
-<article
-  class="event-card"
-  style="background-image: url({{ get_url(path=event.path ~ "image.jpeg") }})"
->
+  <article class="event-card"
+           {% if event.extra is containing("image") %} {% set filename = event.extra | get(key="image") %} style="background-image: url({{ get_url(path=event.path ~ filename) }})" {% endif %}>
   <h3>
     <a href="{{ event.permalink | safe }}"> {{ event.title }}</a>
     <span>
       {{ event.extra | get(key="start") | date(format="%x",locale="fr_CH") }}
     </span>
   </h3>
-
-  {{ event.summary | safe }}
-</article>
+    {{ event.summary | safe }}
+  </article>
 {% endmacro event %}

@@ -3,6 +3,7 @@ title = "\"Orlando: ma biographie politique\""
 
 [extra]
 location = "Satellite"
+image = "poster.jpeg"
 start = 2024-12-14T19:00:00
 +++
 

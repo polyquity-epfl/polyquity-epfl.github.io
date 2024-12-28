@@ -19,8 +19,7 @@
       –
       <time datetime="{{ end }}"> {{ end | date(format=format,locale="fr_CH") }} </time>
     {% endif %}
-  </span>
-  <span>{{ page.extra | get(key="location") }}</span>
-</p>
-{{ page.content | safe }}
+    <span>{{ page.extra | get(key="location") }}</span>
+  </p>
+  {{ page.content | safe }}
 {% endblock content %}
