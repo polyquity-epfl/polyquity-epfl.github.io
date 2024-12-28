@@ -57,6 +57,7 @@ main > :is(p,h2,h3,h4) {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 1rem;
 }
 .event-card > h3 > time {
   white-space: nowrap;
