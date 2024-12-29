@@ -19,8 +19,15 @@ it is automatically built and deployed via GitHub Actions.
 - open a [pull request (PR)](https://github.blog/developer-skills/github/beginners-guide-to-github-creating-a-pull-request/)
   using the "commit changes…" button
 - now the changes can be seen, discussed and modified on the opened PR
-- when everyone agrees with the changes, it will be merged to the main website
-  and deploy to the main website
+- when everyone agrees with the changes,
+  it will be merged and deploy to the real website
+
+### the hard way
+
+- clone the repository using `git`
+- spin a local server for preview with `zola serve` & open a browser to it
+- update the website as wanted
+- commit, make a PR and discuss until agreement
 
 ### syntax
 
