@@ -1,9 +1,17 @@
 {% macro event_card(event) %}
+  {% if event.extra is containing("image") %}
+    {% set filename = event.extra | get(key="image") %}
+    {% set path = event.path ~ filename %}
+    {# ensure image exists #} {% set _ = get_image_metadata(path=path) %}
+    {% set image = get_url(path=path) %}
+  {% endif %}
   <article class="event-card"
-           {% if event.extra is containing("image") %} {% set filename = event.extra | get(key="image") %} style="background-image: url({{ get_url(path=event.path ~ filename) }})" {% endif %}>
+           {% if image %}style="background-image: url({{ image }})"{% endif %}>
     <h3>
       <a href="{{ event.permalink | safe }}">{{ event.title }}</a>
-      <time datetime="{{ event.date | date(format="%F") }}"> {{ event.date | date(format="%x", locale="fr_CH") }} </time>
+      <time datetime="{{ event.date | date(format="%F") }}">
+        {{ event.date | date(format="%x", locale="fr_CH") }}
+      </time>
     </h3>
     {{ event.summary | safe }}
   </article>
