@@ -1,4 +1,4 @@
-# PolyQuity website
+# [PolyQuity website](https://polyquity-epfl.github.io/)
 
 ## build
 
