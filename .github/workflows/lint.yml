@@ -22,4 +22,4 @@ jobs:
         with:
           cache: pip
       - run: pip install djlint
-      - run: djlint template --check --lint
+      - run: djlint templates --check --lint
