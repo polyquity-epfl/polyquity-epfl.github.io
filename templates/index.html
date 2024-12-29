@@ -5,19 +5,19 @@
 {% block content %}
   {% set events = get_section(path="events/_index.md", lang=lang) %}
   <h2>
-    <a href="{{ events.path }}">{{ events.title }}</a>
+    <a href="{{ events.permalink }}">{{ events.title }}</a>
   </h2>
   {% set event = events.pages | first %}
   {{ macros::event_card(event=event) }}
   {% set blog = get_section(path="blog/_index.md", lang=lang) %}
   <h2>
-    <a href="{{ blog.path }}">{{ blog.title }}</a>
+    <a href="{{ blog.permalink }}">{{ blog.title }}</a>
   </h2>
   {% for page_name in ["support", "paye-ton-epfl"] %}
-    {% set section = get_page(path=page_name ~ ".md", lang=lang) %}
+    {% set page = get_page(path=page_name ~ ".md", lang=lang) %}
     <h2>
-      <a href="{{ section.path }}">{{ section.title }}</a>
+      <a href="{{ page.permalink }}">{{ page.title }}</a>
     </h2>
-    {{ section.summary | safe }}
+    {{ page.summary | safe }}
   {% endfor %}
 {% endblock content %}
