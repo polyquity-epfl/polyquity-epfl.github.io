@@ -7,7 +7,7 @@ on:
 
 env:
   CNAME: polyquity-epfl.github.io
-  SUB_PATH: ${{ github.ref != 'refs/heads/main' && format('.previews/{0}/', github.event.number) }}
+  SUB_PATH: ${{ github.ref != 'refs/heads/main' && format('.previews/{0}/', github.event.number) || '' }}
 
 jobs:
   build-and-deploy:
