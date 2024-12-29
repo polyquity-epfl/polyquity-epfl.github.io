@@ -7,18 +7,20 @@
 {% block content %}
   <h2>{{ page.title }}</h2>
   <p id="event-info">
-    {% set start = page.extra | get(key="start") %}
-    {% set start_time = start | date(format="%T",locale="fr_CH") %}
-    {% set format = "%x" %}
-    {% if start_time != "00:00:00" %}
-      {% set format = format ~ " %R" %}
-    {% endif %}
-    <time datetime="{{ start }}"> {{ start | date(format=format,locale="fr_CH") }} </time>
-    {% if page.extra is containing("end") %}
-      {% set end = page.extra | get(key="end") %}
-      –
-      <time datetime="{{ end }}"> {{ end | date(format=format,locale="fr_CH") }} </time>
-    {% endif %}
+    <span>
+      <time datetime="{{ page.date }}"> {{ page.date | date(format="%x", locale="fr_CH") }} </time>
+      {% if page.extra is containing("start") %}
+        {% set start_time = page.extra | get(key="start") %}
+        {% set start_date = page.date ~ "T" ~ start_time %}
+        <time datetime="{{ start_time }}"> {{ start_date | date(format="%R", locale="fr_CH") }} </time>
+      {% endif %}
+      {% if page.extra is containing("end") %}
+        {% set end_time = page.extra | get(key="end") %}
+        {% set end_date = page.date ~ "T" ~ end_time %}
+        –
+        <time datetime="{{ end_time }}"> {{ end_date | date(format="%R", locale="fr_CH") }} </time>
+      {% endif %}
+    </span>
     <span>{{ page.extra | get(key="location") }}</span>
   </p>
   {{ page.content | safe }}

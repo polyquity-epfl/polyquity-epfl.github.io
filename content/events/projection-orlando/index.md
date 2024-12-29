@@ -1,10 +1,11 @@
 +++
 title = "\"Orlando: ma biographie politique\""
+date = 2024-12-14
 
 [extra]
 location = "Satellite"
 image = "poster.jpeg"
-start = 2024-12-14T19:00:00
+start = 19:00:00
 +++
 
 Projection du film-documentaire de Paul B. Preciado.

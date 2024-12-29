@@ -3,8 +3,7 @@
            {% if event.extra is containing("image") %} {% set filename = event.extra | get(key="image") %} style="background-image: url({{ get_url(path=event.path ~ filename) }})" {% endif %}>
     <h3>
       <a href="{{ event.permalink | safe }}">{{ event.title }}</a>
-      {% set date = event.extra | get(key="start") %}
-      <time datetime="{{ date | date(format="%F") }}"> {{ date | date(format="%x", locale="fr_CH") }} </time>
+      <time datetime="{{ event.date | date(format="%F") }}"> {{ event.date | date(format="%x", locale="fr_CH") }} </time>
     </h3>
     {{ event.summary | safe }}
   </article>
