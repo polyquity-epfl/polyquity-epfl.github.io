@@ -1,5 +1,6 @@
 {
   "blank_line_after_tag": "extends,import",
   "blank_line_before_tag": "block",
-  "indent": 2
+  "indent": 2,
+  "ignore": "H030,H031"
 }
