@@ -1,3 +1,3 @@
-base_url = "https://polyquity-epfl.github.io"
+base_url = "/"
 
 compile_sass = true
