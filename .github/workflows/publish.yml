@@ -6,17 +6,20 @@ on:
   pull_request:
 
 env:
-  BASE_URL: "https://polyquity-epfl.github.io/"
-  SUB_PATH: ${{ github.ref == 'refs/heads/main' && '.' || '.previews/${{ github.event.number }}/" }}
+  CNAME: polyquity-epfl.github.io
+  SUB_PATH: ${{ github.ref != 'refs/heads/main' && format('.previews/{0}/', github.event.number) }}
 
 jobs:
-  check-build-and-deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
+      - run: echo "BASE_URL=https://${{ env.CNAME }}/${{ env.SUB_PATH }}" >> $GITHUB_ENV
+
       - uses: actions/checkout@v4
 
       - run: make
@@ -31,7 +34,7 @@ jobs:
           destination_dir: ${{ env.SUB_PATH }}
           # TODO add cname of custom domain
 
-      - uses: hasura/comment-progress@v2
+      - uses: hasura/comment-progress@v2.3.0
         if: github.ref != 'refs/heads/main'
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
