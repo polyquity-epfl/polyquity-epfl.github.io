@@ -3,6 +3,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+  {{ section.content | safe }}
   {% set events = get_section(path="events/_index.md", lang=lang) %}
   <h2>
     <a href="{{ events.permalink }}">{{ events.title }}</a>
