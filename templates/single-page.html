@@ -1,6 +1,18 @@
 {% extends "base.html" %}
 
+{% block head %}
+  <link href="{{ get_url(path='single-page.css') }}" rel="stylesheet" />
+{% endblock head %}
+
 {% block content %}
   <h2>{{ page.title }}</h2>
   {{ page.content | safe }}
+  {% if page.extra is containing("links") %}
+    <span class="links">
+      {% for link in page.extra | get(key="links") %}
+        <a class="{{ link | get(key="fa-class") }}"
+           href="{{ link | get(key="url") }}"></a>
+      {% endfor %}
+    </span>
+  {% endif %}
 {% endblock content %}

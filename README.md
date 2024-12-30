@@ -86,7 +86,7 @@ the first one is a date, the latters are times.
 if you want to add an image, instead of creating a Markdown file,
 create a directory (without ".md" extension) and put the template
 inside it under "index.md". you can then put your image in the same folder
-and write its filename in the "image" metadata field. 
+and write its filename in the "image" metadata field.
 
 ### [blog](./content/blog)
 
@@ -98,3 +98,27 @@ some sections are composed of a single page
 
 - [paye-ton-epfl](./content/paye-ton-epfl.md) to describe the project and offer resources
 - [support](./content/support.md) for helpful links and way to contact
+
+theses can be augmented by some links under the "extra.links" array.
+each link definition requires two key:
+
+- "fa-class": [Font Awesome icon](https://fontawesome.com/icons) to show
+- "url": destination of the link
+
+#### template
+
+```markdown
++++
+title = "Event title"
+
+[[extra.links]] # optional link block
+fa-class = "fa-solid fa-icons"
+url = "http://example.org"
++++
+
+Very few line of introduction.
+
+<!-- more -->
+
+The rest of the page.
+```
