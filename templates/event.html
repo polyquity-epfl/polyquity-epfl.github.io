@@ -8,7 +8,7 @@
   <h2>{{ page.title }}</h2>
   <p id="event-info">
     <span>
-      <time datetime="{{ page.date }}"> {{ page.date | date(format="%x", locale="fr_CH") }} </time>
+      <time datetime="{{ page.date }}"> {{ page.date | date(format="%x", locale="fr_CH") | replace(from=" ", to="") }} </time>
       {% if page.extra is containing("start") %}
         {% set start_time = page.extra | get(key="start") %}
         {% set start_date = page.date ~ "T" ~ start_time %}

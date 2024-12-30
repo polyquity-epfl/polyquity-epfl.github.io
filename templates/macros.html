@@ -10,7 +10,7 @@
     <h3>
       <a href="{{ event.permalink | safe }}">{{ event.title }}</a>
       <time datetime="{{ event.date | date(format="%F") }}">
-        {{ event.date | date(format="%x", locale="fr_CH") }}
+        {{ event.date | date(format="%x", locale="fr_CH") | replace(from=" ", to="") }}
       </time>
     </h3>
     {{ event.summary | safe }}
