@@ -18,6 +18,18 @@ body > header > nav {
   justify-content: space-between;
 }
 
+#navbar-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: $margin-size;
+
+  img {
+    height: calc($navbar-height - 2 * $margin-size);
+  }
+}
+
 #navbar-toggle {
   height: calc(100% - 2 * $margin-size);
 }
