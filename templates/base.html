@@ -5,6 +5,7 @@
     <meta name="viewport" content="initial-scale=1" />
     <title>PolyQuity</title>
     <link href="{{ get_url(path='main.css') }}" rel="stylesheet" />
+    <link rel="icon" href="{{ get_url(path='icon.png') }}" />
     <script src="{{ get_url(path='main.js') }}" defer></script>
 
     {% block head %}
@@ -13,12 +14,10 @@
   <body>
     <header>
       <nav>
-        <h1>
-          <a href="{{ get_url(path='.', lang=lang) }}">
-            <!-- TODO logo -->
-            PolyQuity
-          </a>
-        </h1>
+        <a id="navbar-logo" href="{{ get_url(path='.', lang=lang) }}">
+          <img src="{{ get_url(path='logo.png') }}" />
+	  <h1>PolyQuity</h1>
+        </a>
         <button id="navbar-toggle"
                 type="button"
                 class="fa-solid fa-bars"
