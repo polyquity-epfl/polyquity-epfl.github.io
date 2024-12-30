@@ -49,7 +49,10 @@ from the body of text.
 ## sections
 
 there are multiple sections where you can add content,
-each with its own specificities
+each with its own specificities.
+
+sections usually have a presentation page that is described
+in its `_index.md` file.
 
 ### [events](./content/events)
 
