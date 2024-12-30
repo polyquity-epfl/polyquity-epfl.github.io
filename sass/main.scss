@@ -34,10 +34,13 @@ main {
 main > h2 {
   margin-top: 1.5rem;
 }
-main > :is(p,h2,h3,h4) {
+main > * {
   background-color: $theme-dark;
   padding: $theme-text-padding-size;
   margin-bottom: 0.5em;
+}
+#continue-reading {
+  padding: unset;
 }
 
 .event-card {
