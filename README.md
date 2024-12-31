@@ -36,6 +36,9 @@ are written using [Markdown](https://commonmark.org/),
 a human readable way to format text, see link for information on the syntax.
 every file ending in `.md` uses this format.
 
+note that headings level should at 3 as level 1 & 2 are already used
+for the website name and page title respectively.
+
 the Markdown files in there are augmented with
 a metadata block at the beginning of the file,
 enclosed between `+++` markers.
