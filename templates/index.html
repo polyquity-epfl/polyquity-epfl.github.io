@@ -8,8 +8,13 @@
   <h2>
     <a href="{{ events.permalink }}">{{ events.title }}</a>
   </h2>
-  {% set event = events.pages | first %}
-  {{ macros::event_card(event=event) }}
+    {% for event in events.pages | reverse %}
+      {% set start = event.date | date(format="%s") | int %}
+      {% if start < now(timestamp=true) %}
+        {% continue %}
+      {% endif %}
+      {{ macros::event_card(event=event) }}
+    {% endfor %}
   {% set blog = get_section(path="blog/_index.md", lang=lang) %}
   <h2>
     <a href="{{ blog.permalink }}">{{ blog.title }}</a>
