@@ -1,21 +1,21 @@
 @import "./_theme.scss";
 
 $margin-size: 0.5rem;
-
-body > header {
-  background-color: $theme-dark;
-}
-
 $navbar-height: 50px;
-body > header > nav {
-  position: sticky;
-  height: $navbar-height;
-  margin: auto $margin-size;
 
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+body>header {
+  background-color: $theme-dark;
+
+  >nav {
+    position: sticky;
+    height: $navbar-height;
+    margin: auto $margin-size;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 #navbar-logo {
@@ -32,11 +32,17 @@ body > header > nav {
 
 #navbar-toggle {
   height: calc(100% - 2 * $margin-size);
+
+  color: $theme-contrast;
+  background-color: $theme-dark;
+
+  border: solid $theme-border-size;
 }
 
-#navbar-toggle[aria-expanded="false"] > #navbar-menu {
+#navbar-toggle[aria-expanded="false"]>#navbar-menu {
   display: none;
 }
+
 #navbar-menu {
   position: fixed;
   top: $navbar-height;
@@ -56,14 +62,16 @@ body > header > nav {
   font-size: x-large;
   font-variant: all-small-caps;
 }
-#navbar-menu > * {
+
+#navbar-menu>* {
   margin: auto 2rem;
   padding: 1.5rem;
 
   border: thin;
   border-bottom-style: solid;
 }
-#navbar-menu > *:last-child {
+
+#navbar-menu>*:last-child {
   border-bottom-style: unset;
 }
 
@@ -73,7 +81,8 @@ body > header > nav {
   justify-content: center;
   gap: 1em;
 }
-#navbar-icons > * {
+
+#navbar-icons>* {
   /* webkit likes to style links */
   text-decoration: unset;
 }
