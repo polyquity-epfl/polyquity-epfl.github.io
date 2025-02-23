@@ -8,7 +8,7 @@
 
   font-size: x-large;
 
-  > a {
+  >a {
     padding: 0.5em;
     flex-grow: 1;
     text-align: center;
@@ -18,7 +18,8 @@
     /* webkit likes to style links */
     text-decoration: unset;
   }
-  > a:first-child {
+
+  >a:first-child {
     border-left: none;
   }
 }

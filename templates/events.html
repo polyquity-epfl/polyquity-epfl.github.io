@@ -8,5 +8,7 @@
 
 {% block content %}
   <h2>{{ section.title | capitalize }}</h2>
-  {% for event in section.pages %}{{ macros::event_card(event=event) }}{% endfor %}
+  <div class="events">
+    {% for event in section.pages %}{{ macros::event_card(event=event) }}{% endfor %}
+  </div>
 {% endblock content %}
