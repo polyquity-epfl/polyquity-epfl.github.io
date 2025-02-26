@@ -8,17 +8,43 @@
   <h2>{{ page.title }}</h2>
   <p id="event-info">
     <span>
-      <time datetime="{{ page.date }}"> {{ page.date | date(format="%x", locale="fr_CH") | replace(from=" ", to="") }} </time>
-      {% if page.extra is containing("start") %}
-        {% set start_time = page.extra | get(key="start") %}
+      {% if page.extra is containing("start_time") %}
+        {% set start_time = page.extra | get(key="start_time") %}
         {% set start_date = page.date ~ "T" ~ start_time %}
-        <time datetime="{{ start_time }}"> {{ start_date | date(format="%R", locale="fr_CH") }} </time>
+        {% set date_only = false %}
+      {% else %}
+        {% set start_date = page.date %}
+        {% set date_only = true %}
       {% endif %}
+      <time datetime="{{ start_date }}">
+        {{ start_date | date(format="%x", locale="fr_CH") | replace(from=" ", to="") }}
+        {% if not date_only %}
+          {{ start_date | date(format="%R", locale="fr_CH") }}
+        {% endif %}
+      </time>
       {% if page.extra is containing("end") %}
-        {% set end_time = page.extra | get(key="end") %}
-        {% set end_date = page.date ~ "T" ~ end_time %}
+        {% set end = page.extra | get(key="end") %}
+        {% if end is not containing("-") %}
+          {% set end_date = page.date ~ "T" ~ end %}
+          {% set same_day = true %}
+          {% set date_only = false %}
+        {% else %}
+          {% set end_date = end %}
+          {% set same_day = false %}
+          {% set date_only = true %}
+        {% endif %}
+        {% if start_date | date(format="%s") | int > end_date | date(format="%s") | int %}
+          {{ throw(message="start is after end of event") }}
+        {% endif %}
         –
-        <time datetime="{{ end_time }}"> {{ end_date | date(format="%R", locale="fr_CH") }} </time>
+        <time datetime="{{ end_date }}">
+          {% if not same_day %}
+            {{ end_date | date(format="%x", locale="fr_CH") | replace(from=" ", to="") }}
+          {% endif %}
+          {% if not date_only %}
+            {{ end_date | date(format="%R", locale="fr_CH") }}
+          {% endif %}
+        </time>
       {% endif %}
     </span>
     {% if page.extra is containing("location") %}<span>{{ page.extra | get(key="location") }}</span>{% endif %}

@@ -9,9 +9,20 @@
     <article {% if image %}style="background-image: url({{ image }})"{% endif %}>
       <h3>
         {{ event.title }}
-        <time datetime="{{ event.date | date(format="%F") }}">
-          {{ event.date | date(format="%x", locale="fr_CH") | replace(from=" ", to="") }}
-        </time>
+        <span>
+          <time datetime="{{ event.date | date(format="%F") }}">
+            {{ event.date | date(format="%x", locale="fr_CH") | replace(from=" ", to="") }}
+          </time>
+          {% if event.extra is containing("end") %}
+            {% set end = event.extra | get(key="end") %}
+            {% if end is containing("-") %}
+              –
+              <time datetime="{{ end }}">
+                {{ end | date(format="%x", locale="fr_CH") | replace(from=" ", to="") }}
+              </time>
+            {% endif %}
+          {% endif %}
+        </span>
       </h3>
       {{ event.summary | safe }}
     </article>

@@ -5,7 +5,7 @@ date = 2024-12-14
 [extra]
 location = "Satellite"
 image = "poster.jpeg"
-start = 19:00:00
+start_time = 19:00:00
 +++
 
 Projection du film-documentaire de Paul B. Preciado.
