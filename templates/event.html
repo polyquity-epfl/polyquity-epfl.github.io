@@ -21,7 +21,7 @@
         <time datetime="{{ end_time }}"> {{ end_date | date(format="%R", locale="fr_CH") }} </time>
       {% endif %}
     </span>
-    <span>{{ page.extra | get(key="location") }}</span>
+    {% if page.extra is containing("location") %}<span>{{ page.extra | get(key="location") }}</span>{% endif %}
   </p>
   {{ page.content | safe }}
 {% endblock content %}
