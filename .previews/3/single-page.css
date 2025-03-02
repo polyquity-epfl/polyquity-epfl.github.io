@@ -1,1 +1,1 @@
-.links{margin-top:16px;display:flex;flex-flow:row;font-size:x-large}.links>a{padding:.5em;flex-grow:1;text-align:center;border-left:solid 2px;text-decoration:unset}.links>a:first-child{border-left:none}
+.links{margin-top:16px;display:flex;flex-flow:row;font-size:x-large}.links>a{padding:.5em;flex-grow:1;text-align:center;border-left:solid 2px;background:#461bb7;text-decoration:unset}.links>a:first-child{border-left:none}
