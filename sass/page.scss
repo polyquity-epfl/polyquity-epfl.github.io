@@ -25,3 +25,18 @@
     border-left: none;
   }
 }
+
+main {
+  p:has(> img) {
+    display: flex;
+    justify-content: center;
+
+    background-color: unset;
+    padding: 0;
+
+    >img {
+      width: min(100% - 1rem, 500px);
+      border: calc($theme-text-padding-size) solid $theme-dark;
+    }
+  }
+}
