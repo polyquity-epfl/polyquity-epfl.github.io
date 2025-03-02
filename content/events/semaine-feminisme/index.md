@@ -16,3 +16,5 @@ liés à cette journée afin de prolonger les discussions et débats.
 Au programme, de la nourriture avec des petits jeux ludiques
 autour du féminisme sur l’esplanade, une projection de film,
 un café discussion et un workshop animé par la Carologie!
+
+{{ include_image(path="poster.jpeg") }}
