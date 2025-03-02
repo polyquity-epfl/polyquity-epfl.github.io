@@ -16,7 +16,7 @@
       <nav>
         <a id="navbar-logo" href="{{ get_url(path='.', lang=lang) }}">
           <img src="{{ get_url(path='logo.png') }}" />
-	  <h1>PolyQuity</h1>
+          <h1>PolyQuity</h1>
         </a>
         <button id="navbar-toggle"
                 type="button"
@@ -28,7 +28,7 @@
               {% set section = get_section(path=section_name ~ '/_index.md', lang=lang) %}
               <a href="{{ section.permalink }}">{{ section.title }}</a>
             {% endfor %}
-            {% for page_name in ["support", "paye-ton-epfl"] %}
+            {% for page_name in ["ressources-victimes", "paye-ton-epfl"] %}
               {% set page = get_page(path=page_name ~ ".md", lang=lang) %}
               <a href="{{ page.permalink }}">{{ page.title }}</a>
             {% endfor %}

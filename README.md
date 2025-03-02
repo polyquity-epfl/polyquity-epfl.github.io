@@ -100,7 +100,7 @@ for statements, reviews and more.
 some sections are composed of a single page
 
 - [paye-ton-epfl](./content/paye-ton-epfl.md) to describe the project and offer resources
-- [support](./content/support.md) for helpful links and way to contact
+- [ressources-victimes](./content/ressources-victimes.md) for helpful links and way to contact
 
 theses can be augmented by some links under the "extra.links" array.
 each link definition requires two key:
