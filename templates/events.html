@@ -9,6 +9,22 @@
 {% block content %}
   <h2>{{ section.title | capitalize }}</h2>
   <div class="events">
-    {% for event in section.pages %}{{ macros::event_card(event=event) }}{% endfor %}
+    {% for event in section.pages | reverse %}
+      {% set start = event.date | date(format="%s") | int %}
+      {% if start < now(timestamp=true) %}
+        {% continue %}
+      {% endif %}
+      {{ macros::event_card(event=event) }}
+    {% endfor %}
+  </div>
+  <h3>Passé</h3>
+  <div class="events">
+    {% for event in section.pages | reverse %}
+      {% set start = event.date | date(format="%s") | int %}
+      {% if start > now(timestamp=true) %}
+        {% continue %}
+      {% endif %}
+      {{ macros::event_card(event=event) }}
+    {% endfor %}
   </div>
 {% endblock content %}
