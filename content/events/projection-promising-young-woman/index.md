@@ -17,4 +17,4 @@ Projection du premier long-métrage de Emerald Fennell.
 ### Synopsis
 
 Suite à la mort de sa meilleur amie des suites des violences qu'elle à subit,
-Cassie décide de la venger lors du marriage de l'aggresseur.
+Cassie décide de la venger lors du mariage de l'aggresseur.
