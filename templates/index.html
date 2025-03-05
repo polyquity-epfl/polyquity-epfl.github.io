@@ -26,8 +26,8 @@
   <h2>
     <a href="{{ blog.permalink }}">{{ blog.title }}</a>
   </h2>
-  {% for page_name in ["ressources-victimes", "paye-ton-epfl"] %}
-    {% set page = get_page(path=page_name ~ ".md", lang=lang) %}
+  {% for page_path in ["ressources-victimes.md", "paye-ton-epfl/index.md"] %}
+    {% set page = get_page(path=page_path) %}
     <h2>
       <a href="{{ page.permalink }}">{{ page.title }}</a>
     </h2>

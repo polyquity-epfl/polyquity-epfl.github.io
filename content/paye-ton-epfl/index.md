@@ -40,3 +40,5 @@ afin de garantir que les personnes concernées ne puissent pas être identifiée
 [Trust point de l'EPFL](https://trust-point.epfl.ch/)
 
 [Notre pôle ressources victimes]({{ get_url(path="@/ressources-victimes.md") }})
+
+{{ include_image(path="poster.jpeg") }}

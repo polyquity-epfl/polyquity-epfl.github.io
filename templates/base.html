@@ -28,8 +28,12 @@
               {% set section = get_section(path=section_name ~ '/_index.md', lang=lang) %}
               <a href="{{ section.permalink }}">{{ section.title }}</a>
             {% endfor %}
-            {% for page_name in ["ressources-victimes", "paye-ton-epfl", "association"] %}
-              {% set page = get_page(path=page_name ~ ".md", lang=lang) %}
+            {% for page_path in [
+              "ressources-victimes.md",
+              "paye-ton-epfl/index.md",
+              "association.md",
+              ] %}
+              {% set page = get_page(path=page_path) %}
               <a href="{{ page.permalink }}">{{ page.title }}</a>
             {% endfor %}
             <span id="navbar-icons">
