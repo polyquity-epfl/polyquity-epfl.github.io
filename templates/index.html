@@ -7,7 +7,8 @@
 {% endblock head %}
 
 {% block content %}
-  {{ section.content | safe }}
+  {% set association = get_page(path="association.md", lang=lang) %}
+  {{ association.summary | safe }}
   {% set events = get_section(path="events/_index.md", lang=lang) %}
   <h2>
     <a href="{{ events.permalink }}">{{ events.title }}</a>

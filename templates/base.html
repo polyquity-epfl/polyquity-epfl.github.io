@@ -28,7 +28,7 @@
               {% set section = get_section(path=section_name ~ '/_index.md', lang=lang) %}
               <a href="{{ section.permalink }}">{{ section.title }}</a>
             {% endfor %}
-            {% for page_name in ["ressources-victimes", "paye-ton-epfl"] %}
+            {% for page_name in ["ressources-victimes", "paye-ton-epfl", "association"] %}
               {% set page = get_page(path=page_name ~ ".md", lang=lang) %}
               <a href="{{ page.permalink }}">{{ page.title }}</a>
             {% endfor %}
