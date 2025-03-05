@@ -69,10 +69,10 @@ title = "Event title"
 date = 2024-11-15
 
 [extra]
-location = "Where it is"
-image = "filename.jpg" # optional
-start = 09:15:00 # optional
-end = 11:00:00 # optional
+location = "Where it is" # optional
+image = "filename.jpg" # shown in the event preview, optional
+start_time = 09:15:00 # time, optional
+end = 11:00:00 # date or time, optional
 +++
 
 Very few line of introduction.
@@ -82,9 +82,8 @@ Very few line of introduction.
 The rest of the page.
 ```
 
-note that "date", "start" & "end" are written, without quotes, in the
-[ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) format,
-the first one is a date, the latters are times.
+note that "date", "start_time" & "end" are written, without quotes, in the
+[ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) format.
 
 if you want to add an image, instead of creating a Markdown file,
 create a directory (without ".md" extension) and put the template
