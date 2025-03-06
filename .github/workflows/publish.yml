@@ -6,7 +6,7 @@ on:
   pull_request:
 
 env:
-  CNAME: polyquity-epfl.github.io
+  CNAME: polyquity.ch
   SUB_PATH: ${{ github.ref != 'refs/heads/main' && format('.previews/{0}/', github.event.number) || '' }}
 
 jobs:
@@ -32,7 +32,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           destination_dir: ${{ env.SUB_PATH }}
-          # TODO add cname of custom domain
+          cname: ${{ CNAME }}
 
       - uses: hasura/comment-progress@v2.3.0
         if: github.ref != 'refs/heads/main'
