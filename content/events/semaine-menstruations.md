@@ -6,8 +6,10 @@ date = 2025-05-19
 end = 2025-05-23
 +++
 
-Distributions de culottes menstruelles, de pads et de cups.
+Semaine de sensibilisation sur les menstruations
+et différentes thématiques gynécologiques.
 
-Dépistage gratuits.
+<!-- more -->
 
-Booty therapy en mixité choisie
+Venez déconstruire les tabous autours de ces sujets avec nous
+grâce à des jeux, ateliers et posters éducatifs.
