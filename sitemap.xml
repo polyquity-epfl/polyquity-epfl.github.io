@@ -4,6 +4,9 @@
         <loc>https://polyquity-epfl.github.io/</loc>
     </url>
     <url>
+        <loc>https://polyquity-epfl.github.io/association/</loc>
+    </url>
+    <url>
         <loc>https://polyquity-epfl.github.io/blog/</loc>
     </url>
     <url>
@@ -22,12 +25,24 @@
         <lastmod>2025-03-07</lastmod>
     </url>
     <url>
+        <loc>https://polyquity-epfl.github.io/events/cafe-debattre-avec-tout-le-monde/</loc>
+        <lastmod>2025-04-08</lastmod>
+    </url>
+    <url>
         <loc>https://polyquity-epfl.github.io/events/cafe-lutte-feministe-efficace-sans-intersectionnelle/</loc>
         <lastmod>2025-03-11</lastmod>
     </url>
     <url>
         <loc>https://polyquity-epfl.github.io/events/cafe-misogynie-interiorisee/</loc>
         <lastmod>2024-11-15</lastmod>
+    </url>
+    <url>
+        <loc>https://polyquity-epfl.github.io/events/conference-appropriation-langage-dune-communaute/</loc>
+        <lastmod>2025-04-09</lastmod>
+    </url>
+    <url>
+        <loc>https://polyquity-epfl.github.io/events/conference-science-du-langage-inclusif/</loc>
+        <lastmod>2025-04-10</lastmod>
     </url>
     <url>
         <loc>https://polyquity-epfl.github.io/events/projection-orlando/</loc>
