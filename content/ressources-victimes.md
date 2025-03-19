@@ -23,10 +23,10 @@ Nous sommes là pour vous conseiller sur vos options que ce soit juridiques,
 vous trouver les structures disponibles ou du soutien psychologique.
 Ce sont vos droits, vous décidez entièrement d'appliquer ou non nos conseils
 
-Si vous laissez un message à PayeTonEPFL et laissez un moyen de vous contacter
+Si vous laissez un message à Paye ton EPFL et laissez un moyen de vous contacter
 nous vous écrirons pour vous apporter écoute, soutien et conseils.
 
-Vous pouvez nous contacter hors PayeTonEPFL en tout temps,
+Vous pouvez nous contacter hors Paye ton EPFL en tout temps,
 de manière anonyme ou non, que ce soit
 par [mail](mailto:soutien.polyquity@gmail.com).
 ou sur [notre compte Instagram](https://www.instagram.com/ressources_victimes/)
