@@ -3,6 +3,7 @@ title = "Semaine du langage et de la puissance des mots"
 date = 2025-04-07
 
 [extra]
+image = "poster.jpeg"
 end = 2025-04-11
 +++
 
@@ -26,3 +27,5 @@ la glottophobie, le langage dans les luttes, …
 [Jeudi: conférence: "Le cerveau pense-t-il au masculin? La science derrière le langage inclusif"]({{
   get_url(path="@/events/conference-science-du-langage-inclusif.md")
 }})
+
+{{ include_image(path="poster.jpeg") }}
