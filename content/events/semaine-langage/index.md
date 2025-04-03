@@ -4,7 +4,7 @@ date = 2025-04-07
 
 [extra]
 image = "poster.jpeg"
-end = 2025-04-11
+end = 2025-04-14
 +++
 
 Conférences et ateliers autour des liens entre langage et féminisme
