@@ -25,7 +25,7 @@ la glottophobie, le langage dans les luttes, …
 }})
 
 [Jeudi: conférence: "Le cerveau pense-t-il au masculin? La science derrière le langage inclusif"]({{
-  get_url(path="@/events/conference-science-du-langage-inclusif.md")
+  get_url(path="@/events/conference-science-du-langage-inclusif/index.md")
 }})
 
 [Lundi 14: atelier d'écriture avec Maya Phenn]({{
