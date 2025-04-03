@@ -20,8 +20,8 @@ la glottophobie, le langage dans les luttes, …
   get_url(path="@/events/cafe-debattre-avec-tout-le-monde.md")
 }})
 
-[Mercredi: conférence-discussions: "Peut-on s’approprier le langage d’une communauté? Exemples dans le monde du drag"]({{
-  get_url(path="@/events/conference-appropriation-langage-dune-communaute.md")
+[Mercredi: workshop-discussions: "Peut-on s'approprier le langage de certaines communautés? Exemples dans l'univers drag"]({{
+  get_url(path="@/events/workshop-discussion-appropriation-langage-de-communautes/index.md")
 }})
 
 [Jeudi: conférence: "Le cerveau pense-t-il au masculin? La science derrière le langage inclusif"]({{
