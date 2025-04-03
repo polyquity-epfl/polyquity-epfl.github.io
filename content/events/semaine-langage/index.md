@@ -28,4 +28,8 @@ la glottophobie, le langage dans les luttes, …
   get_url(path="@/events/conference-science-du-langage-inclusif.md")
 }})
 
+[Lundi 14: atelier d'écriture avec Maya Phenn]({{
+  get_url(path="@/events/atelier-ecriture-avec-maya-phenn/index.md")
+}})
+
 {{ include_image(path="poster.jpeg") }}
