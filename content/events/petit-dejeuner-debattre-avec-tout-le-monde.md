@@ -1,5 +1,5 @@
 +++
-title = "Café discussion: \"Doit-on débattre avec tout le monde?\""
+title = "Petit-déjeuner discussion: \"Doit-on débattre avec tout le monde?\""
 date = 2025-04-08
 
 [extra]
