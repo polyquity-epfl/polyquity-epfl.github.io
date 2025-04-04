@@ -8,7 +8,7 @@ fa-class = "fa-brands fa-instagram"
 url = "https://www.instagram.com/ressources_victimes/"
 [[extra.links]]
 fa-class = "fa-regular fa-envelope"
-url = "mailto:soutien.polyquity@gmail.ch"
+url = "mailto:soutien.polyquity@gmail.com"
 +++
 
 Pour informer, écouter, et aider
