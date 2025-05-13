@@ -15,7 +15,8 @@ Se défouler et ressentir son corps!
 
 Présenté par Julie Barreau.
 
-Sur inscription et suivi d'un apéro.
+Sur [inscription](https://docs.google.com/forms/d/e/1FAIpQLSe3ZFphUatz1YYaUyQG1bpxrmRCTgJK59b0zi329xbrpgznug/viewform)
+et suivi d'un apéro.
 
 En mixité choisie sans homme cis.
 
