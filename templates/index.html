@@ -9,6 +9,13 @@
 {% block content %}
   {% set association = get_page(path="association.md", lang=lang) %}
   {{ association.summary | safe }}
+  {% for page_path in ["paye-ton-epfl/index.md", "ressources-victimes.md"] %}
+    {% set page = get_page(path=page_path) %}
+    <h2>
+      <a href="{{ page.permalink }}">{{ page.title }}</a>
+    </h2>
+    {{ page.summary | safe }}
+  {% endfor %}
   {% set events = get_section(path="events/_index.md", lang=lang) %}
   <h2>
     <a href="{{ events.permalink }}">{{ events.title }}</a>
@@ -22,11 +29,4 @@
       {{ macros::event_card(event=event) }}
     {% endfor %}
   </div>
-  {% for page_path in ["ressources-victimes.md", "paye-ton-epfl/index.md"] %}
-    {% set page = get_page(path=page_path) %}
-    <h2>
-      <a href="{{ page.permalink }}">{{ page.title }}</a>
-    </h2>
-    {{ page.summary | safe }}
-  {% endfor %}
 {% endblock content %}
