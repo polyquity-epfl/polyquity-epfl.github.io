@@ -27,7 +27,9 @@ Tous les jours à midi: stand d'information, simulateur de douleurs menstruelles
   get_url(path="@/events/table-ronde-menstruation-et-dysphorie/index.md")
 }})
 
-Mercredi & vendredi midi: distribution de cups, culottes et serviettes gratuites!
+[Mercredi & vendredi midi: distribution de protections hygiéniques réutilisables]({{
+  get_url(path="@/events/distribution-protections-hygieniques/index.md")
+}})
 
 [Vendredi soir: atelier booty therapy]({{
   get_url(path="@/events/atelier-booty-therapy/index.md")
