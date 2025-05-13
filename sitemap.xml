@@ -7,9 +7,6 @@
         <loc>https://polyquity.ch/association/</loc>
     </url>
     <url>
-        <loc>https://polyquity.ch/blog/</loc>
-    </url>
-    <url>
         <loc>https://polyquity.ch/events/</loc>
     </url>
     <url>
@@ -19,6 +16,10 @@
     <url>
         <loc>https://polyquity.ch/events/8-mars-2025/</loc>
         <lastmod>2025-03-08</lastmod>
+    </url>
+    <url>
+        <loc>https://polyquity.ch/events/atelier-booty-therapy/</loc>
+        <lastmod>2025-05-23</lastmod>
     </url>
     <url>
         <loc>https://polyquity.ch/events/atelier-ecriture-avec-maya-phenn/</loc>
@@ -45,6 +46,10 @@
         <lastmod>2025-04-08</lastmod>
     </url>
     <url>
+        <loc>https://polyquity.ch/events/projection-ladybird/</loc>
+        <lastmod>2025-05-19</lastmod>
+    </url>
+    <url>
         <loc>https://polyquity.ch/events/projection-orlando/</loc>
         <lastmod>2024-12-14</lastmod>
     </url>
@@ -63,6 +68,10 @@
     <url>
         <loc>https://polyquity.ch/events/semaine-menstruations/</loc>
         <lastmod>2025-05-19</lastmod>
+    </url>
+    <url>
+        <loc>https://polyquity.ch/events/table-ronde-menstruation-et-dysphorie/</loc>
+        <lastmod>2025-05-20</lastmod>
     </url>
     <url>
         <loc>https://polyquity.ch/events/workshop-discussion-appropriation-langage-de-communautes/</loc>
