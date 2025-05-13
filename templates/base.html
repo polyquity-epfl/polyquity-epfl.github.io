@@ -24,16 +24,16 @@
                 aria-label="toggle navigation menu"
                 aria-expanded="false">
           <div id="navbar-menu">
-            {% set section = get_section(path='events/_index.md', lang=lang) %}
-            <a href="{{ section.permalink }}">{{ section.title }}</a>
             {% for page_path in [
-              "ressources-victimes.md",
-              "paye-ton-epfl/index.md",
               "association.md",
+              "paye-ton-epfl/index.md",
+              "ressources-victimes.md",
               ] %}
               {% set page = get_page(path=page_path) %}
               <a href="{{ page.permalink }}">{{ page.title }}</a>
             {% endfor %}
+            {% set section = get_section(path='events/_index.md', lang=lang) %}
+            <a href="{{ section.permalink }}">{{ section.title }}</a>
             <span id="navbar-icons">
               <a class="fa-regular fa-envelope" href="mailto:polyquity@gmail.com"></a>
               <a class="fa-brands fa-youtube"
