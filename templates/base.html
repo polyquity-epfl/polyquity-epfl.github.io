@@ -24,10 +24,8 @@
                 aria-label="toggle navigation menu"
                 aria-expanded="false">
           <div id="navbar-menu">
-            {% for section_name in ["events", "blog"] %}
-              {% set section = get_section(path=section_name ~ '/_index.md', lang=lang) %}
-              <a href="{{ section.permalink }}">{{ section.title }}</a>
-            {% endfor %}
+            {% set section = get_section(path='events/_index.md', lang=lang) %}
+            <a href="{{ section.permalink }}">{{ section.title }}</a>
             {% for page_path in [
               "ressources-victimes.md",
               "paye-ton-epfl/index.md",

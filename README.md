@@ -90,10 +90,6 @@ create a directory (without ".md" extension) and put the template
 inside it under "index.md". you can then put your image in the same folder
 and write its filename in the "image" metadata field.
 
-### [blog](./content/blog)
-
-for statements, reviews and more.
-
 ### single page sections
 
 some sections are composed of a single page
