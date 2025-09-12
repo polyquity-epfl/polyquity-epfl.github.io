@@ -19,9 +19,10 @@ vers les ressources les plus adéquates.
 
 <!-- more -->
 
-Nous sommes là pour vous conseiller sur vos options que ce soit juridiques,
-vous trouver les structures disponibles ou du soutien psychologique.
-Ce sont vos droits, vous décidez entièrement d'appliquer ou non nos conseils
+Nous sommes là pour vous conseiller sur vos options,
+que ce soit juridique, administratif ou émotionnel.
+Nous vous aiderons à trouver les structures disponibles ou du soutien psychologique.
+Ce sont vos droits, vous décidez entièrement d'appliquer ou non nos conseils.
 
 Si vous laissez un message à Paye ton EPFL et laissez un moyen de vous contacter
 nous vous écrirons pour vous apporter écoute, soutien et conseils.
