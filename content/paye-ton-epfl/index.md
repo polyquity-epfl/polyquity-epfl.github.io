@@ -30,7 +30,7 @@ disponibles sur [Instagram](https://instagram.com/payetonepfl) et sur
 
 Toute personne ayant subi ou été témoin de situations de harcèlement
 ou de discriminations peut témoigner en
-[remplissant le form](https://framaforms.org/temoignages-sensibilisation-polyquity-1607092769)
+[remplissant le form](https://framaforms.org/temoignages-sensibilisation-polyquity-1607092769).
 Paye ton EPFL veille à anonymiser chaque témoignage écrit
 afin de garantir que les personnes concernées ne puissent pas être identifiées.
 
