@@ -4,7 +4,7 @@ date = 2025-09-23
 
 [extra]
 image = "header.jpeg"
-end_date = 2025-09-24
+end = 2025-09-24
 +++
 
 Venez nous retrouver à notre stand pendant la semaine des associations!
