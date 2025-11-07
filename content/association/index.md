@@ -8,7 +8,7 @@ Association de l'EPFL qui défend un féminisme intersectionnel et inclusif sur 
 
 <!-- more -->
 
-[Consulter nos statuts](https://drive.google.com/file/d/1QgPlT4WEUrm_E5MQcZkmiHMy2FPlJ9BF/)
+[Consulter nos statuts](https://drive.google.com/file/d/1bhuYwIqehUSihLw8lDIEV5nBlVxCH6lz/).
 
 Si vous voulez nous rejoindre,
 remplissez [notre formulaire d'inscription](https://forms.gle/eYytQ9Fd7FKJgLSv5).
