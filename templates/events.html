@@ -11,7 +11,7 @@
   <div class="events">
     {% for event in section.pages | reverse %}
       {% set start = event.date | date(format="%s") | int %}
-      {% if start < now(timestamp=true) %}
+      {% if start + (24*60*60) < now(timestamp=true) %}
         {% continue %}
       {% endif %}
       {{ macros::event_card(event=event) }}
@@ -19,9 +19,9 @@
   </div>
   <h3>Passé</h3>
   <div class="events">
-    {% for event in section.pages | reverse %}
+    {% for event in section.pages %}
       {% set start = event.date | date(format="%s") | int %}
-      {% if start > now(timestamp=true) %}
+      {% if start + (24*60*60) > now(timestamp=true) %}
         {% continue %}
       {% endif %}
       {{ macros::event_card(event=event) }}

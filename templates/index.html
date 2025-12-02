@@ -23,7 +23,7 @@
   <div class="events">
     {% for event in events.pages | reverse %}
       {% set start = event.date | date(format="%s") | int %}
-      {% if start < now(timestamp=true) %}
+      {% if start + (24*60*60) < now(timestamp=true) %}
         {% continue %}
       {% endif %}
       {{ macros::event_card(event=event) }}
