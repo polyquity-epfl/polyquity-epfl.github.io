@@ -36,10 +36,15 @@ main {
   h4,
   h5,
   h6,
-  p {
+  p,
+  ul {
     background-color: $theme-dark;
     padding: $theme-text-padding-size;
     margin-bottom: 0.5em;
+  }
+
+  ul {
+    padding-left: $theme-text-padding-size + 1.5rem;
   }
 }
 
