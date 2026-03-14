@@ -11,4 +11,11 @@ Semaine de sensibilisation sur les menstruations
 
 <!-- more -->
 
-Avec une distribution de culottes et cup menstruelles.
+### Programme
+
+Deux midi: distribution de protections menstruelles réutilisables,
+avec un atelier de broderie avec [ArtePoly](https://artepoly.agepoly.ch/).
+
+Mardi soir: projection de film
+
+Vendredi soir: atelier booty therapy
