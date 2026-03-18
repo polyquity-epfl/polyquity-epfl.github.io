@@ -5,6 +5,7 @@ date = 2026-03-24
 [extra]
 start_time = 18:00:00
 image = "poster.jpeg"
+location = "CO 2"
 +++
 
 Événement de sensibilisation au racisme anti-musulman dans le cadre de la semaine d’actions contre le racisme
