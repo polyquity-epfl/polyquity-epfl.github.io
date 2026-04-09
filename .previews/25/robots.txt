@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Allow: /
+Sitemap: https://polyquity.ch/.previews/25/sitemap.xml
