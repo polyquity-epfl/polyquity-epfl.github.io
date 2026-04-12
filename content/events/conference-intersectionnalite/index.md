@@ -4,6 +4,7 @@ date = 2026-04-22
 
 [extra]
 image = "poster.jpeg"
+location = "CE 1 5"
 start_time = 18:15:00
 +++
 
