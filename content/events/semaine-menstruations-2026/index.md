@@ -4,7 +4,7 @@ date = 2026-05-04
 
 [extra]
 end = 2026-05-08
-image = "image.jpeg"
+image = "poster.jpeg"
 +++
 
 Semaine de sensibilisation sur les menstruations
@@ -13,9 +13,15 @@ Semaine de sensibilisation sur les menstruations
 
 ### Programme
 
-Deux midi: distribution de protections menstruelles réutilisables,
-avec un atelier de broderie avec [ArtePoly](https://artepoly.agepoly.ch/).
+Tous les jours, de 12h à 14h, [stand devant le CO](../semaine-menstruations-2026-stand).
+Avec distribution gratuite de cups et culottes menstruelles et customisation jeudi et vendredi.
 
-Mardi soir: projection de film
+Mardi 20h: [projection de "La Maison des femmes"](../projection-maison-des-femmes).
 
-Vendredi soir: atelier booty therapy
+Mercredi 18h: [lecture collective de "nullipares, et alors? être sans enfants"](
+  ../arpentage-nullipares-et-alors
+)
+
+Vendredi 18h30: [atelier booty therapy](../semaine-menstruations-2026-booty-therapy)
+
+{{ include_image(path="programme.jpeg") }}
