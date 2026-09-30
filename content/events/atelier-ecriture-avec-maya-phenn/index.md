@@ -14,4 +14,4 @@ L'autrice de ["Sors de ce corps"](https://www.helloeditions.fr/product/sors-de-c
 Maya Phenn, anime un atelier d'écriture et de discussion,
 en collaboration avec [PLUME](https://plume.epfl.ch/).
 
-{{ include_image(path="poster.jpeg") }}
+{{ <include_image page path="poster.jpeg" /> }}

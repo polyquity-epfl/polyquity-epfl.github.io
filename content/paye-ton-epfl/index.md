@@ -41,4 +41,4 @@ afin de garantir que les personnes concernées ne puissent pas être identifiée
 
 [Notre pôle ressources victimes]({{ get_url(path="@/ressources-victimes.md") }})
 
-{{ include_image(path="poster.jpeg") }}
+{{ <include_image page path="poster.jpeg" /> }}

@@ -1,0 +1,8 @@
+{% component include_image(page, path: string, alt: string = "") %}
+{# ensure image exists #} {% set _ = get_image_metadata(path=page.path ~ path) %}
+{% set image = get_url(path=page.path ~ path) %}
+<p>
+  <img src="{{ image }}"
+       alt="{{ alt | default(value=path | split(pat="/") | last, boolean=true) }}" />
+</p>
+{% endcomponent include_image %}

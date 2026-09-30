@@ -12,4 +12,4 @@ Viens prendre cups, culottes menstruelles et serviettes gratuitement!
 
 <!-- more -->
 
-{{ include_image(path="poster.svg") }}
+{{ <include_image page path="poster.svg" /> }}

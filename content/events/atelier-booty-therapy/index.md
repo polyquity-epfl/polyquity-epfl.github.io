@@ -22,4 +22,4 @@ En mixité choisie sans homme cis.
 
 Prends des habits de sport confortables et dans lesquelles tu peux bouger.
 
-{{ include_image(path="poster.jpeg") }}
+{{ <include_image page path="poster.jpeg" /> }}

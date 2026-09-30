@@ -19,4 +19,4 @@ Sur [inscription via ce formulaire](
 
 Suivi d'un apéro.
 
-{{ include_image(path="poster.jpeg") }}
+{{ <include_image page path="poster.jpeg" /> }}

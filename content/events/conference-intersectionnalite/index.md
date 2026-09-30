@@ -18,4 +18,4 @@ La sociologue et chercheuse Sarah Mazouz, notamment co-autrice de l’essai « P
 
 La conférence sera suivie d’un apéro 🌞
 
-{{ include_image(path="poster.jpeg") }}
+{{ <include_image page path="poster.jpeg" /> }}

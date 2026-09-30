@@ -39,4 +39,4 @@ un café discussion et un workshop animé par la Carologie!
   get_url(path="@/events/workshop-genre-et-violence-mecanismes-invisibles/index.md")
 }})
 
-{{ include_image(path="poster.jpeg") }}
+{{ <include_image page path="poster.jpeg" /> }}

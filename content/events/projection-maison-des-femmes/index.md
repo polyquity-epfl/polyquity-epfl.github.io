@@ -14,4 +14,4 @@ Visionnage suivi d'une discussion collective
 
 Avec popcorn offert
 
-{{ include_image(path="poster.jpeg") }}
+{{ <include_image page path="poster.jpeg" /> }}

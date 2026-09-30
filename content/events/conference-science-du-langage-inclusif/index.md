@@ -12,4 +12,4 @@ image = "poster.jpeg"
 
 Présentée par Dr. Pascal Gygax et suivie d'un apéro.
 
-{{ include_image(path="poster.jpeg") }}
+{{ <include_image page path="poster.jpeg" /> }}

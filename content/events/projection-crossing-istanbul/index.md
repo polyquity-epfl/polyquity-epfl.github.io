@@ -16,4 +16,4 @@ En collaboration avec EROS, Ekivock et PlanQueer.
 
 Suivi d'un apéro et d'une discussion.
 
-{{ include_image(path="poster.jpeg") }}
+{{ <include_image page path="poster.jpeg" /> }}

@@ -19,4 +19,4 @@ Il prendra la forme d’une table ronde composée de :
 
 L’événement sera suivi d’un apéro-discussion :)
 
-{{ include_image(path="poster.jpeg") }}
+{{ <include_image page path="poster.jpeg" /> }}

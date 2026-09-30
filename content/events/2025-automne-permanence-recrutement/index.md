@@ -18,4 +18,4 @@ de réfléchir à comment faire changer le campus par plein de projets,
 ou de soutenir concrètement les victimes de VSS,
 ta place est parmi nous!
 
-{{ include_image(path="../2025-automne-recrutement/poster.jpeg") }}
+{{ <include_image page path="../2025-automne-recrutement/poster.jpeg" /> }}

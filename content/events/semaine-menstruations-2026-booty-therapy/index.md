@@ -27,4 +27,4 @@ Dresscode recommandée: short, tenue sportive où tu peux bouger et où tu te se
 
 Apéro offert
 
-{{ include_image(path="poster.jpeg") }}
+{{ <include_image page path="poster.jpeg" /> }}

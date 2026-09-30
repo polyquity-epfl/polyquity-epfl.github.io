@@ -20,4 +20,4 @@ ta place est parmi nous!
 
 On aura aussi un petit apéro juste après.
 
-{{ include_image(path="poster.jpeg") }}
+{{ <include_image page path="poster.jpeg" /> }}

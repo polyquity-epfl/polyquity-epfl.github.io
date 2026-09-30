@@ -12,4 +12,4 @@ image = "poster.jpeg"
 
 Viennoiseries et boissons chaudes offertes!
 
-{{ include_image(path="poster.jpeg") }}
+{{ <include_image page path="poster.jpeg" /> }}

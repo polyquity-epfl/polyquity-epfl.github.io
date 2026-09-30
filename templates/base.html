@@ -15,42 +15,40 @@
     <header>
       <nav>
         <a id="navbar-logo" href="{{ get_url(path='.', lang=lang) }}">
-          <img src="{{ get_url(path='logo.png') }}" />
+          <img src="{{ get_url(path='logo.png') }}" alt="logo" />
           <h1>PolyQuity</h1>
         </a>
         <button id="navbar-toggle"
                 type="button"
                 class="fa-solid fa-bars"
                 aria-label="toggle navigation menu"
-                aria-expanded="false">
-          <div id="navbar-menu">
-            {% for page_path in [
-              "association/index.md",
-              "paye-ton-epfl/index.md",
-              "ressources-victimes.md",
-              ] %}
-              {% set page = get_page(path=page_path) %}
-              <a href="{{ page.permalink }}">{{ page.title }}</a>
-            {% endfor %}
-            {% set section = get_section(path='events/_index.md', lang=lang) %}
-            <a href="{{ section.permalink }}">{{ section.title }}</a>
-            <span id="navbar-icons">
-              <a class="fa-regular fa-envelope" href="mailto:polyquity@gmail.com"></a>
-              <a class="fa-brands fa-youtube"
-                 href="https://www.youtube.com/@polyquityepfl154"></a>
-              <a class="fa-brands fa-instagram"
-                 href="https://www.instagram.com/polyquity"></a>
-              <a class="fa-brands fa-square-facebook"
-                 href="https://www.facebook.com/polyquity/"></a>
-              <a class="fa-brands fa-linkedin"
-                 href="https://ch.linkedin.com/company/polyquity"></a>
-            </span>
-          </div>
-        </button>
+                aria-expanded="false"></button>
+        <div id="navbar-menu">
+          {% for page_path in [
+            "association/index.md",
+            "paye-ton-epfl/index.md",
+            "ressources-victimes.md",
+          ] %}
+            {% set page = get_page(path=page_path) %}
+            <a href="{{ page.permalink }}">{{ page.title }}</a>
+          {% endfor %}
+          {% set section = get_section(path='events/_index.md', lang=lang) %}
+          <a href="{{ section.permalink }}">{{ section.title }}</a>
+          <span id="navbar-icons">
+            <a class="fa-regular fa-envelope" href="mailto:polyquity@gmail.com"></a>
+            <a class="fa-brands fa-youtube"
+               href="https://www.youtube.com/@polyquityepfl154"></a>
+            <a class="fa-brands fa-instagram"
+               href="https://www.instagram.com/polyquity"></a>
+            <a class="fa-brands fa-square-facebook"
+               href="https://www.facebook.com/polyquity/"></a>
+            <a class="fa-brands fa-linkedin"
+               href="https://ch.linkedin.com/company/polyquity"></a>
+          </span>
+        </div>
       </nav>
     </header>
     <main>
-
       {% block content %}
       {% endblock content %}
     </main>

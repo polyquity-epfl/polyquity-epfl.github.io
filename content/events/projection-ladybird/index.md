@@ -16,4 +16,4 @@ Suivi d'une discussion.
 
 Popcorn et sirop offerts
 
-{{ include_image(path="poster.jpeg") }}
+{{ <include_image page path="poster.jpeg" /> }}

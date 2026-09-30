@@ -15,4 +15,4 @@ Venez préparer votre pancarte pour la manifestation du 8 mars!
 
 En collaboration avec [ArtePoly](https://artepoly.agepoly.ch/).
 
-{{ include_image(path="poster.jpeg") }}
+{{ <include_image page path="poster.jpeg" /> }}

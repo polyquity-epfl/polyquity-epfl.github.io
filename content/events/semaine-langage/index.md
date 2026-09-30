@@ -32,4 +32,4 @@ la glottophobie, le langage dans les luttes, …
   get_url(path="@/events/atelier-ecriture-avec-maya-phenn/index.md")
 }})
 
-{{ include_image(path="poster.jpeg") }}
+{{ <include_image page path="poster.jpeg" /> }}

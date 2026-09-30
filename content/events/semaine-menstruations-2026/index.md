@@ -24,4 +24,4 @@ Mercredi 18h: [lecture collective de "nullipares, et alors? être sans enfants"]
 
 Vendredi 18h30: [atelier booty therapy](../semaine-menstruations-2026-booty-therapy)
 
-{{ include_image(path="programme.jpeg") }}
+{{ <include_image page path="programme.jpeg" /> }}

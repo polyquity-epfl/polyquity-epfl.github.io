@@ -27,4 +27,4 @@ Viens nous rencontrer le
   get_url(path="@/events/2025-automne-permanence-recrutement/index.md")
 }}).
 
-{{ include_image(path="poster.jpeg") }}
+{{ <include_image page path="poster.jpeg" /> }}

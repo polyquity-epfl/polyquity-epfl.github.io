@@ -7,7 +7,7 @@
 {% block content %}
   <h2>{{ page.title }}</h2>
   {{ page.content | safe }}
-  {% if page.extra is containing("links") %}
+  {% if "links" in page.extra %}
     <span class="links">
       {% for link in page.extra | get(key="links") %}
         <a class="{{ link | get(key="fa-class") }}"

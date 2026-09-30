@@ -1,5 +1,3 @@
-{% import "macros.html" as macros %}
-
 {% extends "base.html" %}
 
 {% block head %}
@@ -26,7 +24,7 @@
       {% if start + (24*60*60) < now(timestamp=true) %}
         {% continue %}
       {% endif %}
-      {{ macros::event_card(event=event) }}
+      {{ <event_card event /> }}
     {% endfor %}
   </div>
 {% endblock content %}

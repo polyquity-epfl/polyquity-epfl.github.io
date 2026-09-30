@@ -39,7 +39,7 @@ body>header {
   border: solid $theme-border-size;
 }
 
-#navbar-toggle[aria-expanded="false"]>#navbar-menu {
+#navbar-toggle[aria-expanded="false"]~#navbar-menu {
   display: none;
 }
 
@@ -57,7 +57,6 @@ body>header {
   display: flex;
   flex-direction: column;
 
-  /* font takes from button, let's revert */
   font-family: sans-serif;
   font-size: x-large;
   font-variant: all-small-caps;
@@ -69,6 +68,8 @@ body>header {
 
   border: thin;
   border-bottom-style: solid;
+
+  text-align: center;
 }
 
 #navbar-menu>*:last-child {

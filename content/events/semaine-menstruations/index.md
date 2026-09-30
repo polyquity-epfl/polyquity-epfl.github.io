@@ -35,4 +35,4 @@ Tous les jours à midi: stand d'information, simulateur de douleurs menstruelles
   get_url(path="@/events/atelier-booty-therapy/index.md")
 }})
 
-{{ include_image(path="poster.svg") }}
+{{ <include_image page path="poster.svg" /> }}

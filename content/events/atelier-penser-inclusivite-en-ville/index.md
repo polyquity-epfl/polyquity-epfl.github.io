@@ -20,4 +20,4 @@ Sur inscription via [ce formulaire](
 N'oubliez pas d'avoir un téléphone portable avec de la batterie
 et une connexion internet pour pouvoir participer pleinement à l'atelier!
 
-{{ include_image(path="poster.png") }}
+{{ <include_image page path="poster.png" /> }}
