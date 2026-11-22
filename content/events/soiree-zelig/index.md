@@ -23,8 +23,8 @@ Au programme 💥
 
 19H30 - 21H00 ❤️‍🔥Show Burlesque présenté par [Sally Vespertine](https://www.instagram.com/sally.vespertine/), [Sally Mercury](https://www.instagram.com/sally.mercury/),
 [The ursula flavor](https://www.instagram.com/the_ursula_flavor/), [Narcix](https://www.instagram.com/narcix_draglesque/) & Caniche Mambo
-Durant le show les portes d'entrée seront fermées ! Venez à l'heure pour ne pas rater le spectacle 😉
+Durant le show les portes d'entrée seront fermées! Venez à l'heure pour ne pas rater le spectacle 😉
 
 21H00 - 21H30 ✨ Petite pause, le temps de profiter encore un peu des Hot-Dogs et de vous abreuver 🫶🏻
 
-21H30 - 23H30 💋 Il est temps de danser !! DJ set de [K I F T I K](https://www.instagram.com/kif.tif/) qui vous prépare un set de Sassy Trance-Techno ❤️‍🔥
+21H30 - 23H30 💋 Il est temps de danser!! DJ set de [K I F T I K](https://www.instagram.com/kif.tif/) qui vous prépare un set de Sassy Trance-Techno ❤️‍🔥

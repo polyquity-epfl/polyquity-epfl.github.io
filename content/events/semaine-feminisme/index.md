@@ -8,7 +8,7 @@ end = 2025-03-14
 +++
 
 Dans le cadre de la journée internationale des femmes le 8 mars,
-nous organisons quelques évènements directement
+nous organisons quelques événements directement
 liés à cette journée afin de prolonger les discussions et débats.
 
 <!-- more -->

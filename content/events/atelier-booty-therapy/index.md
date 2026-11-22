@@ -13,7 +13,7 @@ Se défouler et ressentir son corps!
 
 <!-- more -->
 
-Présenté par Julie Barreau.
+Présenté par Julia Barreau.
 
 Sur [inscription](https://docs.google.com/forms/d/e/1FAIpQLSe3ZFphUatz1YYaUyQG1bpxrmRCTgJK59b0zi329xbrpgznug/viewform)
 et suivi d'un apéro.

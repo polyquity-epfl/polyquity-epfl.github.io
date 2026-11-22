@@ -18,7 +18,7 @@ Avec distribution gratuite de cups et culottes menstruelles et customisation jeu
 
 Mardi 20h: [projection de "La Maison des femmes"](../projection-maison-des-femmes).
 
-Mercredi 18h: [lecture collective de "Nullipares, et alors? Être sans enfants"](
+Mercredi 18h: [lecture collective de "Nullipares et alors? Être sans enfants"](
   ../arpentage-nullipares-et-alors
 )
 

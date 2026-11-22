@@ -1,5 +1,5 @@
 +++
-title = "Café discussions: misogynie intériorisée"
+title = "Café discussion: misogynie intériorisée"
 date = 2024-11-15
 
 [extra]

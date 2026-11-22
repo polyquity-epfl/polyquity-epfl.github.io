@@ -13,7 +13,7 @@ Association de l'EPFL qui défend un féminisme intersectionnel et inclusif sur 
 Si vous voulez nous rejoindre,
 remplissez [notre formulaire d'inscription](https://forms.gle/eYytQ9Fd7FKJgLSv5).
 
-### Prises de positions
+### Prises de position
 
 #### [Palantir à ForumEPFL](./2026-palantir-forumepfl.pdf)
 
