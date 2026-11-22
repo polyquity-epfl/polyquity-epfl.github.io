@@ -96,6 +96,12 @@ some sections are composed of a single page
 
 - [paye-ton-epfl](./content/paye-ton-epfl.md) to describe the project and offer resources
 - [ressources-victimes](./content/ressources-victimes.md) for helpful links and way to contact
+  (no longer active, see below)
+
+a page can be marked as no longer active by adding `inactive = true`
+under its `[extra]` block: it then shows a "Ce service n'est plus actif." notice.
+pages linked from the menu or the home page have to be removed from
+[base.html](./templates/base.html) and [index.html](./templates/index.html) by hand.
 
 theses can be augmented by some links under the "extra.links" array.
 each link definition requires two key:

@@ -6,6 +6,12 @@
 
 {% block content %}
   <h2>{{ page.title }}</h2>
+  {% if page.extra.inactive | default(value=false) %}
+    <p class="inactive-notice">
+      <i class="fa-solid fa-circle-pause"></i>
+      Ce service n'est plus actif.
+    </p>
+  {% endif %}
   {{ page.content | safe }}
   {% if "links" in page.extra %}
     <span class="links">

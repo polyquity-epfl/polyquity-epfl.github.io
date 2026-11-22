@@ -58,3 +58,22 @@ main {
     }
   }
 }
+
+// shown on pages marked `inactive = true` in their front matter
+.inactive-notice {
+  margin: -0.5rem 0 2rem;
+  padding: 1rem 1.2rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  font-weight: 700;
+
+  border: $theme-border;
+  background: $theme-soft;
+
+  > i {
+    font-size: 1.4rem;
+  }
+}

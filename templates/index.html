@@ -58,14 +58,12 @@
     {% endif %}
   </section>
   <section class="pillars">
-    {% for page_path in ["ressources-victimes.md", "paye-ton-epfl/index.md"] %}
-      {% set page = get_page(path=page_path) %}
-      <a href="{{ page.permalink }}">
-        <i class="fa-solid {% if loop.first %}fa-hand-holding-heart{% else %}fa-bullhorn{% endif %}"></i>
-        <h3>{{ page.title }}</h3>
-        {{ page.summary | safe }}
-      </a>
-    {% endfor %}
+    {% set page = get_page(path="paye-ton-epfl/index.md") %}
+    <a href="{{ page.permalink }}">
+      <i class="fa-solid fa-bullhorn"></i>
+      <h3>{{ page.title }}</h3>
+      {{ page.summary | safe }}
+    </a>
     <a href="{{ association.permalink }}#prises-de-positions">
       <i class="fa-solid fa-scale-balanced"></i>
       <h3>Prises de position</h3>
