@@ -100,3 +100,148 @@
     }
   }
 }
+
+.events-empty {
+  > p {
+    margin: 0;
+  }
+
+  .ctas {
+    margin-top: 1rem;
+
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.7rem;
+
+    letter-spacing: normal;
+    word-spacing: normal;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+// ----- past events: semester groups, grid/list toggle -----
+
+.past-head {
+  margin-top: 3rem;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  h3 {
+    margin: 0;
+    font-size: 2rem;
+  }
+}
+
+.layout-toggle {
+  display: flex;
+
+  border: $theme-border;
+
+  > button {
+    padding: 0.45rem 0.9rem;
+
+    font: inherit;
+    font-weight: 600;
+    color: $theme-ink;
+
+    border: none;
+    background: $theme-paper;
+    cursor: pointer;
+
+    &[aria-pressed="true"] {
+      color: white;
+      background: $theme-ink;
+    }
+
+    + button {
+      border-left: $theme-border;
+    }
+  }
+}
+
+.semesters {
+  margin: 1.2rem 0 0;
+
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.5rem;
+
+  > a {
+    padding: 0.3rem 0.8rem;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+
+    border: $theme-border;
+
+    &:hover {
+      color: inherit;
+      background: $theme-soft;
+    }
+  }
+}
+
+.events.past {
+  > .semester {
+    grid-column: 1 / -1;
+    margin: 1.5rem 0 -0.5rem;
+
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+
+    // don't hide under the sticky navbar when jumped to
+    scroll-margin-top: 6rem;
+  }
+
+  &.as-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    > .semester {
+      margin: 2rem 0 0.8rem;
+    }
+
+    > .semester + .event-card {
+      border-top: $theme-border;
+    }
+
+    > .event-card {
+      padding: 0.9rem 0;
+
+      flex-direction: row;
+      align-items: center;
+      gap: 1.2rem;
+
+      border-bottom: $theme-border;
+
+      > .poster {
+        flex: 0 0 5rem;
+      }
+
+      > .meta {
+        padding: 0;
+      }
+
+      &:hover {
+        background: $theme-soft-light;
+
+        > .poster {
+          transform: none;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}

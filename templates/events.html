@@ -6,21 +6,91 @@
 
 {% block content %}
   <h2>{{ section.title | capitalize }}</h2>
-  <div class="events">
-    {% for event in section.pages | reverse %}
-      {% set start = event.date | date(format="%s") | int %}
-      {% if start + (24*60*60) < now(timestamp=true) %}
-        {% continue %}
-      {% endif %}
-      {{ <event_card event /> }}
-    {% endfor %}
+  {# an event stays "upcoming" until a day after it starts #}
+  {% set_global upcoming_count = 0 %}
+  {% for event in section.pages %}
+    {% set start = event.date | date(format="%s") | int %}
+    {% if start + (24*60*60) >= now(timestamp=true) %}
+      {% set_global upcoming_count = upcoming_count + 1 %}
+    {% endif %}
+  {% endfor %}
+  {% if upcoming_count > 0 %}
+    <div class="events">
+      {% for event in section.pages | reverse %}
+        {% set start = event.date | date(format="%s") | int %}
+        {% if start + (24*60*60) < now(timestamp=true) %}
+          {% continue %}
+        {% endif %}
+        {{ <event_card event /> }}
+      {% endfor %}
+    </div>
+  {% else %}
+    {% set association = get_page(path="association/index.md", lang=lang) %}
+    <div class="events-empty">
+      <p>Pas d'événement annoncé pour l'instant. Les prochains sont publiés ici et sur Instagram.</p>
+      <p class="ctas">
+        <a class="btn primary" href="https://www.instagram.com/polyquity">
+          <i class="fa-brands fa-instagram"></i> Suivre sur Instagram
+        </a>
+        <a class="btn" href="{{ association.permalink }}">Nous rejoindre pour en organiser</a>
+      </p>
+    </div>
+  {% endif %}
+  {# past events, grouped by EPFL semester: spring = February–August, autumn = September–January #}
+  {% set_global semesters = "" %}
+  {% set_global previous = "" %}
+  {% for event in section.pages %}
+    {% set start = event.date | date(format="%s") | int %}
+    {% if start + (24*60*60) >= now(timestamp=true) %}
+      {% continue %}
+    {% endif %}
+    {% set month = event.date | date(format="%m") | int %}
+    {% set year = event.date | date(format="%Y") | int %}
+    {% if month >= 2 and month <= 8 %}
+      {% set semester = "Printemps " ~ year %}
+    {% elif month == 1 %}
+      {% set semester = "Automne " ~ (year - 1) %}
+    {% else %}
+      {% set semester = "Automne " ~ year %}
+    {% endif %}
+    {% if semester != previous %}
+      {% set_global semesters = semesters ~ '<a href="#' ~ semester | slugify ~ '">' ~ semester ~ '</a>' %}
+      {% set_global previous = semester %}
+    {% endif %}
+  {% endfor %}
+  <div class="past-head">
+    <h3>Passé</h3>
+    <span class="layout-toggle" role="group" aria-label="affichage" hidden>
+      <button type="button" data-layout="grid" aria-pressed="true">
+        <i class="fa-solid fa-table-cells-large"></i> Affiches
+      </button>
+      <button type="button" data-layout="list" aria-pressed="false">
+        <i class="fa-solid fa-list"></i> Liste
+      </button>
+    </span>
   </div>
-  <h3>Passé</h3>
-  <div class="events">
+  <nav class="semesters" aria-label="semestres">
+    {{ semesters | safe }}
+  </nav>
+  <div class="events past">
+    {% set_global previous = "" %}
     {% for event in section.pages %}
       {% set start = event.date | date(format="%s") | int %}
-      {% if start + (24*60*60) > now(timestamp=true) %}
+      {% if start + (24*60*60) >= now(timestamp=true) %}
         {% continue %}
+      {% endif %}
+      {% set month = event.date | date(format="%m") | int %}
+      {% set year = event.date | date(format="%Y") | int %}
+      {% if month >= 2 and month <= 8 %}
+        {% set semester = "Printemps " ~ year %}
+      {% elif month == 1 %}
+        {% set semester = "Automne " ~ (year - 1) %}
+      {% else %}
+        {% set semester = "Automne " ~ year %}
+      {% endif %}
+      {% if semester != previous %}
+        <h4 class="semester" id="{{ semester | slugify }}">{{ semester }}</h4>
+        {% set_global previous = semester %}
       {% endif %}
       {{ <event_card event /> }}
     {% endfor %}
