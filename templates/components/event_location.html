@@ -1,0 +1,81 @@
+{% component event_location(location: string) %}
+{# where an event happens, with a link to the EPFL map or, off campus, to Google Maps #}
+{% set places = load_data(path="data/places.toml") %}
+{% set place = places | get(key=location | lower, default="") %}
+{% set_global query = location %}
+{% set_global google = "" %}
+{% if place %}
+  {% if "google" in place %}
+    {% set_global google = place.google %}
+  {% else %}
+    {% set_global query = place.plan %}
+  {% endif %}
+{% endif %}
+{% set_global map_url = "" %}
+{% set_global detail = "" %}
+{% if google %}
+  {% if "https://" in google %}
+    {% set_global map_url = google %}
+  {% else %}
+    {% set_global map_url = "https://www.google.com/maps/search/?api=1&query=" ~ (google | urlencode_strict) %}
+  {% endif %}
+  {% set_global detail = "Hors campus" %}
+{% else %}
+  {# resolved at build time; if the EPFL map can't be reached, fall back to its search #}
+  {% set found = load_data(url="https://plan.epfl.ch/search?limit=5&query=" ~ (query | urlencode_strict), format="json", required=false) %}
+  {% set_global room = "" %}
+  {% set_global building = "" %}
+  {% set_global floor = "" %}
+  {% if found %}
+    {% for feature in found.features %}
+      {% if feature.properties.layer_name == "locaux" and not room %}
+        {% set_global room = feature.properties.label %}
+        {% set_global floor = feature.properties.floor %}
+      {% elif feature.properties.layer_name == "batiments" and not building %}
+        {% set_global building = feature.properties.label %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+  {% if room %}
+    {% set_global map_url = "https://plan.epfl.ch/?room==" ~ (room | urlencode_strict) %}
+    {% if floor == 0 %}
+      {% set floor_text = "rez-de-chaussée" %}
+    {% elif floor == 1 %}
+      {% set floor_text = "1er étage" %}
+    {% elif floor > 1 %}
+      {% set floor_text = floor ~ "e étage" %}
+    {% else %}
+      {% set floor_text = "sous-sol" %}
+    {% endif %}
+    {% set_global detail = "Salle " ~ room ~ " · " ~ floor_text %}
+  {% elif building %}
+    {% set_global map_url = "https://plan.epfl.ch/?room=" ~ (building | urlencode_strict) %}
+    {% set_global detail = "Bâtiment " ~ building %}
+  {% elif found and found.features %}
+    {% set_global map_url = "https://plan.epfl.ch/?room=" ~ (query | urlencode_strict) %}
+    {% set_global detail = "Campus EPFL" %}
+  {% elif not found %}
+    {% set_global map_url = "https://plan.epfl.ch/?room=" ~ (query | urlencode_strict) %}
+  {% endif %}
+{% endif %}
+<div class="where">
+  <i class="fa-solid fa-location-dot"></i>
+  <p>
+    <b>{{ location }}</b>
+    {% if detail %}<span>{{ detail }}</span>{% endif %}
+  </p>
+  {% if map_url %}
+    <a class="btn primary"
+       href="{{ map_url }}"
+       target="_blank"
+       rel="noopener">
+      <i class="fa-solid fa-map"></i>
+      {% if google %}
+        Ouvrir dans Google Maps
+      {% else %}
+        Voir sur le plan
+      {% endif %}
+    </a>
+  {% endif %}
+</div>
+{% endcomponent event_location %}

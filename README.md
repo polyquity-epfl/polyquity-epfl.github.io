@@ -82,6 +82,11 @@ Very few line of introduction.
 The rest of the page.
 ```
 
+"location" is shown with a link to the [EPFL map](https://plan.epfl.ch):
+room numbers ("CM 1105", "CO2", …) are found automatically.
+for other places, add them to [data/places.toml](./data/places.toml),
+either with their EPFL map id or, outside the campus, a Google Maps search.
+
 note that "date", "start_time" & "end" are written, without quotes, in the
 [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) format.
 

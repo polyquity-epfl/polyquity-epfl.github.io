@@ -26,3 +26,45 @@
     margin-right: 0.4rem;
   }
 }
+
+// where the event happens, with a link to the map
+.where {
+  max-width: 42rem;
+  margin: -0.5rem 0 2rem;
+  padding: 1.2rem 1.4rem;
+
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 1rem 1.4rem;
+
+  border: $theme-border;
+  @include theme-shadow($theme-accent);
+
+  > i {
+    font-size: 1.8rem;
+    color: $theme-accent;
+  }
+
+  > p {
+    flex: 1;
+    min-width: 12rem;
+    margin: 0;
+
+    b {
+      display: block;
+      font-size: 1.2rem;
+    }
+
+    span {
+      color: $theme-muted;
+      font-size: 0.95rem;
+    }
+  }
+
+  > .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}

@@ -1,0 +1,31 @@
+# Event venues that are not EPFL room numbers.
+#
+# An event's `location` is looked up here (keys in lowercase).
+# - plan:   id on the EPFL map (https://plan.epfl.ch), a room like "CM 2 420" or a building like "CO"
+# - google: for places outside the campus, a Google Maps link or a search text
+#
+# Room numbers ("CM 1105", "CO2", …) don't need an entry: they are found on the EPFL map automatically.
+
+[satellite]
+plan = "CM 2 420"
+
+["terrasse satellite"]
+plan = "CM 2 420"
+
+[polydome]
+plan = "PO 094.0"
+
+["devant le co"]
+plan = "CO"
+
+["devant sg"]
+plan = "SG"
+
+["esplanade de montbenon, lausanne"]
+google = "Esplanade de Montbenon, Lausanne"
+
+["zélig"]
+google = "https://www.google.com/maps/place/Zelig/@46.5260292,6.577486,613m/data=!3m2!1e3!4b1!4m6!3m5!1s0x478c316d64138bb5:0x779cfd75cf687142!8m2!3d46.5260255!4d6.5800609!16s%2Fg%2F11t3fl57yq"
+
+[zelig]
+google = "https://www.google.com/maps/place/Zelig/@46.5260292,6.577486,613m/data=!3m2!1e3!4b1!4m6!3m5!1s0x478c316d64138bb5:0x779cfd75cf687142!8m2!3d46.5260255!4d6.5800609!16s%2Fg%2F11t3fl57yq"
