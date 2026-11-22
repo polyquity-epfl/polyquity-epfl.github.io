@@ -38,3 +38,9 @@ mis en place pour les prochaines éditions.
 
 Une [prise de position individuelle](./vivapoly-2025-anonyme.pdf) nous a aussi été transmise, nous la relayons ici.
 
+### Projets passés
+
+#### [Ressources Victimes](@/ressources-victimes.md)
+
+Pôle d'écoute et d'orientation pour les personnes victimes
+de discrimination, harcèlement ou violence. Ce service n'est plus actif.
