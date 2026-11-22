@@ -26,7 +26,13 @@ body {
   line-height: 1.55;
   color: $theme-ink;
 
-  background-color: $theme-paper;
+  // soft halos keep the page from feeling white; fixed so they stay put while scrolling
+  background:
+    radial-gradient(40rem 30rem at 85% 8%, #efd0f8 0%, transparent 70%),
+    radial-gradient(35rem 28rem at 5% 45%, #f8dde6 0%, transparent 70%),
+    radial-gradient(45rem 30rem at 90% 85%, #ecd6fa 0%, transparent 70%),
+    $theme-paper;
+  background-attachment: fixed;
 }
 
 /* webkit likes to style links */
@@ -94,6 +100,7 @@ img {
   text-decoration: none;
 
   border: $theme-border;
+  border-radius: $theme-radius-small;
   background: $theme-paper;
 
   transition: transform 0.15s, box-shadow 0.15s;

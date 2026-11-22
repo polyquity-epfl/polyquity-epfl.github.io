@@ -13,6 +13,7 @@
     font-weight: 700;
 
     border: $theme-border;
+    border-radius: $theme-radius-small;
     background: $theme-soft;
   }
 
@@ -39,6 +40,7 @@
   gap: 1rem 1.4rem;
 
   border: $theme-border;
+  border-radius: $theme-radius;
   @include theme-shadow($theme-accent);
 
   > i {

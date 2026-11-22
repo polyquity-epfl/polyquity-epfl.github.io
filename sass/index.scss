@@ -79,6 +79,7 @@
     text-decoration: none;
 
     border: $theme-border;
+    border-radius: $theme-radius;
     background: $theme-soft;
 
     transition: transform 0.15s, box-shadow 0.15s;

@@ -1,4 +1,5 @@
-// direction "Affiche": PolyQuity purple on paper, ink borders, offset shadows
+// direction "Affiche": PolyQuity purple on paper, ink borders, offset shadows,
+// softened with rounded corners and purple/pink halos behind the page
 $theme-paper: #fbf7f2;
 $theme-ink: #1d1320;
 $theme-muted: #5a4a5e;
@@ -13,6 +14,8 @@ $theme-font: "Lexend", system-ui, sans-serif;
 $theme-border-size: 2px;
 $theme-border: $theme-border-size solid $theme-ink;
 $theme-shadow-size: 4px;
+$theme-radius: 12px; // blocks: posters, cards, boxes
+$theme-radius-small: 10px; // buttons, chips
 $theme-gutter: clamp(1rem, 4vw, 3rem);
 $theme-max-width: 72rem;
 

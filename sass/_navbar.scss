@@ -8,7 +8,10 @@ body > header {
   top: 0;
   z-index: 10;
 
-  background-color: $theme-paper;
+  // see-through so the halos show under the sticky bar
+  background-color: rgba($theme-paper, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-bottom: $theme-border;
 
   > nav {
@@ -52,6 +55,7 @@ body > header {
   color: $theme-ink;
   background-color: $theme-paper;
   border: $theme-border;
+  border-radius: $theme-radius-small;
   font-size: 1.2rem;
   cursor: pointer;
 }
@@ -95,6 +99,8 @@ body > header {
 
     margin: 1rem;
     border: $theme-border;
+    border-radius: $theme-radius;
+    overflow: hidden;
     background-color: $theme-paper;
     @include theme-shadow($theme-accent);
 

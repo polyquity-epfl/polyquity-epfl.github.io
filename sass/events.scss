@@ -34,6 +34,7 @@
   padding: 1.2rem 1.4rem;
 
   border: $theme-border-size dashed $theme-accent;
+  border-radius: $theme-radius;
   background: $theme-soft-light;
 }
 
@@ -48,6 +49,7 @@
     overflow: hidden;
 
     border: $theme-border;
+    border-radius: $theme-radius;
     background: $theme-soft;
 
     transition: transform 0.15s, box-shadow 0.15s;
@@ -202,8 +204,10 @@
 
 .layout-toggle {
   display: flex;
+  overflow: hidden;
 
   border: $theme-border;
+  border-radius: $theme-radius-small;
 
   > button {
     padding: 0.45rem 0.9rem;
@@ -242,6 +246,7 @@
     text-decoration: none;
 
     border: $theme-border;
+    border-radius: $theme-radius-small;
 
     &:hover {
       color: inherit;
