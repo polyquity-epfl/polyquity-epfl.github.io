@@ -15,13 +15,13 @@
   <div class="meta">
     <p class="date">
       <time datetime="{{ event.date | date(format="%F") }}">
-        {{ event.date | date(format="EEE d MMM yy", locale="fr") }}
+        {{ event.date | date(format="EEE d MMM y", locale="fr") }}
       </time>
       {% if "end" in event.extra %}
         {% set end = event.extra | get(key="end") %}
         {% if "-" in end %}
           –
-          <time datetime="{{ end }}">{{ end | date(format="EEE d MMM yy", locale="fr") }}</time>
+          <time datetime="{{ end }}">{{ end | date(format="EEE d MMM y", locale="fr") }}</time>
         {% endif %}
       {% endif %}
       {% if "start_time" in event.extra %}

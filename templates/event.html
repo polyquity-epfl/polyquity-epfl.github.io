@@ -9,6 +9,7 @@
   <h2>{{ page.title }}</h2>
   <p id="event-info">
     <span>
+      <i class="fa-regular fa-calendar"></i>
       {% if "start_time" in page.extra %}
         {% set start_time = page.extra | get(key="start_time") %}
         {% set start_date = page.date ~ "T" ~ start_time %}
@@ -18,9 +19,9 @@
         {% set date_only = true %}
       {% endif %}
       <time datetime="{{ start_date }}">
-        {{ start_date | date(format="%d.%m.%y") }}
+        {{ start_date | date(format="EEEE d MMMM y", locale="fr") }}
         {% if not date_only %}
-          {{ start_date | date(format="%H:%M") }}
+          · {{ start_date | date(format="%H:%M") }}
         {% endif %}
       </time>
       {% if "end" in page.extra %}
@@ -40,7 +41,7 @@
         –
         <time datetime="{{ end_date }}">
           {% if not same_day %}
-            {{ end_date | date(format="%d.%m.%y") }}
+            {{ end_date | date(format="EEEE d MMMM y", locale="fr") }}
           {% endif %}
           {% if not date_only %}
             {{ end_date | date(format="%H:%M") }}
@@ -48,7 +49,9 @@
         </time>
       {% endif %}
     </span>
-    {% if "location" in page.extra %}<span>{{ page.extra | get(key="location") }}</span>{% endif %}
+    {% if "location" in page.extra %}
+      <span><i class="fa-solid fa-location-dot"></i>{{ page.extra | get(key="location") }}</span>
+    {% endif %}
   </p>
   {{ page.content | safe }}
 {% endblock content %}
