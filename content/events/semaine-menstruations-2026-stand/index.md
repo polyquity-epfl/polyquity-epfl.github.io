@@ -17,7 +17,7 @@ Tous les jours, de 12h à 14h.
 Jeudi et vendredi, distribution gratuite de cups et culottes menstruelles.
 
 Avec un atelier de broderie avec [ArtePoly](https://artepoly.agepoly.ch/) pour personnaliser ta culotte,
-un simulateur de douleurs menstruelles, des instruments gynécologiques, un quizz, …
+un simulateur de douleurs menstruelles, des instruments gynécologiques, un quiz, …
 
 {{ <include_image page path="poster.jpeg" /> }}
 

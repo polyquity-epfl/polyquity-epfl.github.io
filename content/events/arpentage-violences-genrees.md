@@ -6,7 +6,7 @@ date = 2026-03-11
 start_time = 17:30:00
 +++
 
-"King King Théorie" & "Au-delà de la pénétration"
+"King Kong Théorie" & "Au-delà de la pénétration"
 
 <!-- more -->
 

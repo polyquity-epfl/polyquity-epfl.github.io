@@ -10,7 +10,7 @@ image = "poster.png"
 
 <!-- more -->
 
-Presenté par Chloé Montavon et Caroline Iorio du Laboratoire de Sociologie Urbaine et
+Présenté par Chloé Montavon et Caroline Iorio du Laboratoire de Sociologie Urbaine et
 suivi d'un apéro.
 
 Sur inscription via [ce formulaire](

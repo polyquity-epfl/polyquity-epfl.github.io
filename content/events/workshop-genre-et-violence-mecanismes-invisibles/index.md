@@ -13,6 +13,6 @@ focus sur l’adultisme, le régime de genre et le classisme.
 
 <!-- more -->
 
-Sur inscription, nombre de place limitée à une trentaine de personnes.
+Sur inscription, nombre de places limité à une trentaine de personnes.
 
 {{ <include_image page path="poster.jpeg" /> }}

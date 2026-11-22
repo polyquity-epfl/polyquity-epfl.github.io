@@ -10,6 +10,6 @@ image = "poster.jpeg"
 
 <!-- more -->
 
-Présenté par Stéphanie Pereiras Gomes et suivie d'un apéro.
+Présenté par Stéphanie Pereiras Gomes et suivi d'un apéro.
 
 {{ <include_image page path="poster.jpeg" /> }}

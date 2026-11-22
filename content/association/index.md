@@ -32,7 +32,7 @@ mis en place pour les prochaines éditions.
 * [LEX 8.3.1](./2026-lex-association_8.3.1.pdf)
 * [Arbre de décisions](./2026-lex-association_arbre.pdf)
 
-#### [LEX sur le harcelement](./2025-lex-harcelement.pdf)
+#### [LEX sur le harcèlement](./2025-lex-harcelement.pdf)
 
 #### [Vivapoly 2025](./vivapoly-2025-convergence.pdf)
 

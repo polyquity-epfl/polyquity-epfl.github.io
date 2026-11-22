@@ -15,6 +15,6 @@ Projection du film-documentaire de Paul B. Preciado.
 ### Synopsis
 
 Avec comme fil conducteur l'histoire d'Orlando
-écrit par Virginia Woolf dans son livre homonyme,
-des acteuricex trans & non-binaire témoignent de
+écrite par Virginia Woolf dans son livre homonyme,
+des acteuricex trans & non-binaires témoignent de
 leurs parcours personnels.

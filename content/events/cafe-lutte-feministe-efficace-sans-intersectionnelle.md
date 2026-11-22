@@ -1,5 +1,5 @@
 +++
-title = "Café discussion: \"La lutte feministe peut elle être efficace sans une approche intersectionnelle?\""
+title = "Café discussion: \"La lutte féministe peut-elle être efficace sans une approche intersectionnelle?\""
 date = 2025-03-11
 
 [extra]

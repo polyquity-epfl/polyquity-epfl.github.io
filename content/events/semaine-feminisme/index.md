@@ -35,7 +35,7 @@ un café discussion et un workshop animé par la Carologie!
   get_url(path="@/events/cafe-lutte-feministe-efficace-sans-intersectionnelle.md")
 }})
 
-[Mercredi: workshop sur les méchanismes de la violence de genre]({{
+[Mercredi: workshop sur les mécanismes de la violence de genre]({{
   get_url(path="@/events/workshop-genre-et-violence-mecanismes-invisibles/index.md")
 }})
 

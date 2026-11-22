@@ -12,7 +12,7 @@ location = "CM 013"
 
 <!-- more -->
 
-Arpentage (lecture et discussion) autour du livre d'une collectif feministe,
+Arpentage (lecture et discussion) autour du livre d'un collectif féministe,
 dirigé par Chloé Delaume
 
 {{ <include_image page path="poster.jpeg" /> }}

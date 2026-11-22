@@ -12,7 +12,7 @@ et différentes thématiques gynécologiques.
 
 <!-- more -->
 
-Venez déconstruire les tabous autours de ces sujets avec nous
+Venez déconstruire les tabous autour de ces sujets avec nous
 grâce à des jeux, ateliers et posters éducatifs.
 
 ### Programme

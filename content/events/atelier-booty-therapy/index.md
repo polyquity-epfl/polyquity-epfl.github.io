@@ -20,6 +20,6 @@ et suivi d'un apéro.
 
 En mixité choisie sans homme cis.
 
-Prends des habits de sport confortables et dans lesquelles tu peux bouger.
+Prends des habits de sport confortables et dans lesquels tu peux bouger.
 
 {{ <include_image page path="poster.jpeg" /> }}

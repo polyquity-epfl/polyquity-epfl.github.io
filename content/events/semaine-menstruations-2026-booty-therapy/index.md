@@ -23,7 +23,7 @@ Place limitée! [Inscription via ce formulaire](
   https://docs.google.com/forms/d/e/1FAIpQLScL7Yg9YGYY1kJ_Z2UfWNkTc8KKo25g0QsqyfGysmF-dG-t5A/viewform
 )
 
-Dresscode recommandée: short, tenue sportive où tu peux bouger et où tu te sens bien!
+Dress code recommandé: short, tenue sportive où tu peux bouger et où tu te sens bien!
 
 Apéro offert
 

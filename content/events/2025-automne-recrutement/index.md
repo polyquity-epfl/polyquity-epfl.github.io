@@ -20,7 +20,7 @@ ta place est parmi nous!
 
 On aura aussi un petit apéro juste après.
 
-Tu n'est pas disponible à cette date?
+Tu n'es pas disponible à cette date?
 Pas de panique!
 Viens nous rencontrer le
 [18 & 19 septembre à midi à la permanence devant le SG]({{

@@ -14,7 +14,7 @@ Présenté par Sarah Mazouz
 
 L'intersectionnalité, c'est une approche qui considère que les différentes formes de discrimination et d'oppression (racisme, sexisme…) sont indissociables.
 
-La sociologue et chercheuse Sarah Mazouz, notamment co-autrice de l’essai « Pour l’intersectionnalité » nous partage son expertise sur cette notion nécessaire pour les luttes féministes.
+La sociologue et chercheuse Sarah Mazouz, notamment co-autrice de l’essai « Pour l’intersectionnalité », nous partage son expertise sur cette notion nécessaire pour les luttes féministes.
 
 La conférence sera suivie d’un apéro 🌞
 
