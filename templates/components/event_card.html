@@ -29,29 +29,51 @@
     </div>
   {% endif %}
   <div class="meta">
-    <p class="date">
-      <time datetime="{{ event.date | date(format="%F") }}">
-        {{ event.date | date(format="EEE d MMM y", locale="fr") }}
-      </time>
-      {% if "end" in event.extra %}
-        {% set end = event.extra | get(key="end") %}
-        {% if "-" in end %}
-          –
-          <time datetime="{{ end }}">{{ end | date(format="EEE d MMM y", locale="fr") }}</time>
-        {% endif %}
+    {% set_global range_end = "" %}
+    {% if "end" in event.extra %}
+      {% set end = event.extra | get(key="end") %}
+      {% if "-" in end %}
+        {% set_global range_end = end %}
       {% endif %}
-      {% if "start_time" in event.extra %}
-        {% set start_time = event.extra | get(key="start_time") %}
-        · {{ (event.date ~ "T" ~ start_time) | date(format="%H:%M") }}
+    {% endif %}
+    {# the day on its own line: "Vendredi 8 mai", "Du 4 au 8 mai";
+       the year is given by the surrounding section (semester, upcoming) #}
+    <p class="date">
+      {% if range_end %}
+        {% if event.date | date(format="%Y") != range_end | date(format="%Y") %}
+          {% set start_format = "d MMM y" %}
+          {% set end_format = "d MMM y" %}
+        {% elif event.date | date(format="%m") != range_end | date(format="%m") %}
+          {% set start_format = "d MMMM" %}
+          {% set end_format = "d MMMM" %}
+        {% else %}
+          {% set start_format = "d" %}
+          {% set end_format = "d MMMM" %}
+        {% endif %}
+        Du
+        <time datetime="{{ event.date | date(format="%F") }}">{{ event.date | date(format=start_format, locale="fr") }}</time>
+        au
+        <time datetime="{{ range_end }}">{{ range_end | date(format=end_format, locale="fr") }}</time>
+      {% else %}
+        <time datetime="{{ event.date | date(format="%F") }}">
+          {{ event.date | date(format="EEEE d MMMM", locale="fr") | capitalize }}
+        </time>
       {% endif %}
     </p>
-    <h3>{{ event.title }}</h3>
-    <div class="summary">{{ event.summary | safe }}</div>
-    {% if "location" in event.extra %}
-      <p class="location">
-        <i class="fa-solid fa-location-dot"></i> {{ event.extra | get(key="location") }}
+    <div class="body">
+      <h3>{{ event.title }}</h3>
+      <div class="summary">{{ event.summary | safe }}</div>
+      {# time and place share the bottom line: "18:30 · CM 1105" #}
+      <p class="place">
+        {% if "start_time" in event.extra %}
+          {% set start_time = event.extra | get(key="start_time") %}
+          <span><i class="fa-regular fa-clock"></i> {{ (event.date ~ "T" ~ start_time) | date(format="%H:%M") }}</span>
+        {% endif %}
+        {% if "location" in event.extra %}
+          <span><i class="fa-solid fa-location-dot"></i> {{ event.extra | get(key="location") }}</span>
+        {% endif %}
       </p>
-    {% endif %}
+    </div>
   </div>
 </a>
 {% endcomponent event_card %}

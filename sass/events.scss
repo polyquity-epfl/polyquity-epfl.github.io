@@ -7,6 +7,28 @@
   margin-bottom: 3rem;
 }
 
+// align cards in a row: posters and dates line up, the text (title, summary,
+// time + place) follows without gaps
+.events:not(.as-list) {
+  row-gap: 0;
+
+  > .event-card {
+    display: grid;
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+    margin-bottom: 2rem;
+
+    > .meta {
+      display: contents;
+    }
+
+    // time + place follow the text directly
+    > .meta > .body > .place {
+      padding-top: 0.4rem;
+    }
+  }
+}
+
 .events-empty {
   margin: 0 0 2rem;
   padding: 1.2rem 1.4rem;
@@ -66,31 +88,68 @@
   }
 
   > .meta {
-    padding-top: 0.8rem;
-
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
 
     > * {
-      margin: 0;
+      margin: 0 0 0.25rem;
     }
   }
 
   .date {
+    margin-top: 0.8rem;
+
     font-size: 0.9rem;
     font-weight: 700;
     color: $theme-accent-dark;
   }
 
+  // cards stay regular: long titles and summaries are cut,
+  // the full text is on the event page (and still read by screen readers)
   h3 {
     font-size: 1.15rem;
     font-weight: 800;
     line-height: 1.2;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .place {
+    margin: 0;
+
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0 0.9rem;
+  }
+
+  .summary:empty {
+    display: none;
+  }
+
+  .summary {
+    > p:first-child {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      overflow: hidden;
+    }
+
+    > :not(:first-child) {
+      display: none;
+    }
+  }
+
+  .body > h3 {
+    margin: 0 0 0.25rem;
   }
 
   .summary,
-  .location {
+  .place {
     font-size: 0.95rem;
     line-height: 1.4;
     color: $theme-muted;
@@ -194,7 +253,7 @@
 .events.past {
   > .semester {
     grid-column: 1 / -1;
-    margin: 1.5rem 0 -0.5rem;
+    margin: 1.5rem 0 1.2rem;
 
     font-size: 1.5rem;
     font-weight: 800;
@@ -232,6 +291,14 @@
 
       > .meta {
         padding: 0;
+
+        > :last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .date {
+        margin-top: 0;
       }
 
       &:hover {
