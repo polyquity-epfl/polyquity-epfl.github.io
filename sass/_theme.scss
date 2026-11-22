@@ -7,7 +7,8 @@ $theme-accent-dark: #a51ed0; // accent readable as text on paper
 $theme-soft: #e8c1f4;
 $theme-soft-light: #f3e3fa;
 
-$theme-font: "Archivo", system-ui, sans-serif;
+// Lexend: chosen for legibility (distinct letterforms, wide spacing)
+$theme-font: "Lexend", system-ui, sans-serif;
 
 $theme-border-size: 2px;
 $theme-border: $theme-border-size solid $theme-ink;

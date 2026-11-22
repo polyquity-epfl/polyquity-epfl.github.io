@@ -3,6 +3,7 @@ $fa-font-path: "./fontawesome/webfonts";
 @import "./fontawesome/brands.scss";
 @import "./fontawesome/solid.scss";
 
+@import "./_fonts.scss";
 @import "./_theme.scss";
 
 @import "./_navbar.scss";
@@ -45,6 +46,15 @@ main {
   max-width: $theme-max-width;
   margin: 0 auto;
   padding: 2rem $theme-gutter 4rem;
+}
+
+// reading text: extra letter/word spacing and line height,
+// following the British Dyslexia Association style guide
+main p,
+main li {
+  letter-spacing: 0.03em;
+  word-spacing: 0.12em;
+  line-height: 1.7;
 }
 
 h2,

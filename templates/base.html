@@ -4,10 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1" />
     <title>PolyQuity</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&display=swap"
-          rel="stylesheet" />
+    <link rel="preload"
+          href="{{ get_url(path='fonts/lexend/lexend-latin.woff2') }}"
+          as="font"
+          type="font/woff2"
+          crossorigin />
     <link href="{{ get_url(path='main.css') }}" rel="stylesheet" />
     <link rel="icon" href="{{ get_url(path='icon.png') }}" />
     <script src="{{ get_url(path='main.js') }}" defer></script>
