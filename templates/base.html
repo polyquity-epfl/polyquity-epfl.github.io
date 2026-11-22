@@ -4,6 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1" />
     <title>PolyQuity</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&display=swap"
+          rel="stylesheet" />
     <link href="{{ get_url(path='main.css') }}" rel="stylesheet" />
     <link rel="icon" href="{{ get_url(path='icon.png') }}" />
     <script src="{{ get_url(path='main.js') }}" defer></script>
@@ -52,5 +56,25 @@
       {% block content %}
       {% endblock content %}
     </main>
+    <footer>
+      <span>PolyQuity · Association de l'EPFL</span>
+      <span class="icons">
+        <a class="fa-regular fa-envelope"
+           href="mailto:polyquity@gmail.com"
+           aria-label="email"></a>
+        <a class="fa-brands fa-youtube"
+           href="https://www.youtube.com/@polyquityepfl154"
+           aria-label="YouTube"></a>
+        <a class="fa-brands fa-instagram"
+           href="https://www.instagram.com/polyquity"
+           aria-label="Instagram"></a>
+        <a class="fa-brands fa-square-facebook"
+           href="https://www.facebook.com/polyquity/"
+           aria-label="Facebook"></a>
+        <a class="fa-brands fa-linkedin"
+           href="https://ch.linkedin.com/company/polyquity"
+           aria-label="LinkedIn"></a>
+      </span>
+    </footer>
   </body>
 </html>

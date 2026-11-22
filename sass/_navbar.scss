@@ -1,20 +1,27 @@
 @import "./_theme.scss";
 
-$margin-size: 0.5rem;
-$navbar-height: 50px;
+$navbar-height: 4.5rem;
+$navbar-breakpoint: 760px;
 
-body>header {
-  background-color: $theme-dark;
+body > header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
 
-  >nav {
-    position: sticky;
+  background-color: $theme-paper;
+  border-bottom: $theme-border;
+
+  > nav {
     height: $navbar-height;
-    margin: auto $margin-size;
+    max-width: $theme-max-width;
+    margin: 0 auto;
+    padding: 0 $theme-gutter;
 
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    gap: 1rem;
   }
 }
 
@@ -22,68 +29,96 @@ body>header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  gap: $margin-size;
+  gap: 0.6rem;
+
+  text-decoration: none;
 
   img {
-    height: calc($navbar-height - 2 * $margin-size);
+    height: 2.7rem;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
   }
 }
 
 #navbar-toggle {
-  height: calc(100% - 2 * $margin-size);
+  width: 2.8rem;
+  height: 2.8rem;
 
-  color: $theme-contrast;
-  background-color: $theme-dark;
-
-  border: solid $theme-border-size;
-}
-
-#navbar-toggle[aria-expanded="false"]~#navbar-menu {
-  display: none;
+  color: $theme-ink;
+  background-color: $theme-paper;
+  border: $theme-border;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 #navbar-menu {
-  position: fixed;
-  top: $navbar-height;
-  left: 0;
-  right: 0;
-
-  margin: 2rem 2rem;
-  border: $theme-border-size solid;
-  border-radius: 1rem;
-  background-color: $theme-dark;
-
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
 
-  font-family: sans-serif;
-  font-size: x-large;
-  font-variant: all-small-caps;
-}
+  font-weight: 600;
 
-#navbar-menu>* {
-  margin: auto 2rem;
-  padding: 1.5rem;
-
-  border: thin;
-  border-bottom-style: solid;
-
-  text-align: center;
-}
-
-#navbar-menu>*:last-child {
-  border-bottom-style: unset;
+  > a {
+    text-decoration: none;
+  }
 }
 
 #navbar-icons {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  gap: 1em;
+  display: none;
 }
 
-#navbar-icons>* {
-  /* webkit likes to style links */
-  text-decoration: unset;
+@media (min-width: $navbar-breakpoint) {
+  #navbar-toggle {
+    display: none;
+  }
+}
+
+@media (max-width: $navbar-breakpoint) {
+  #navbar-toggle[aria-expanded="false"] ~ #navbar-menu {
+    display: none;
+  }
+
+  #navbar-menu {
+    position: fixed;
+    top: $navbar-height;
+    left: 0;
+    right: 0;
+
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+
+    margin: 1rem;
+    border: $theme-border;
+    background-color: $theme-paper;
+    @include theme-shadow($theme-accent);
+
+    font-size: 1.3rem;
+    font-weight: 800;
+
+    > * {
+      padding: 1.1rem 1.5rem;
+      border-bottom: $theme-border;
+    }
+
+    > *:last-child {
+      border-bottom: none;
+    }
+  }
+
+  #navbar-icons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1.4rem;
+
+    > * {
+      text-decoration: none;
+    }
+  }
 }

@@ -7,47 +7,131 @@ $fa-font-path: "./fontawesome/webfonts";
 
 @import "./_navbar.scss";
 
-/* webkit likes to style links */
-a {
-  color: unset;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
+  min-height: 100vh;
 
-  font-family: sans-serif;
-  color: $theme-contrast;
+  display: flex;
+  flex-direction: column;
 
-  background-color: $theme-light;
+  font-family: $theme-font;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: $theme-ink;
+
+  background-color: $theme-paper;
+}
+
+/* webkit likes to style links */
+a {
+  color: inherit;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.15em;
+}
+
+a:hover {
+  color: $theme-accent-dark;
 }
 
 main {
-  margin: auto 1rem;
+  flex: 1;
+  width: 100%;
+  max-width: $theme-max-width;
+  margin: 0 auto;
+  padding: 2rem $theme-gutter 4rem;
 }
 
-main>h2 {
-  margin-top: 1.5rem;
+h2,
+h3,
+h4 {
+  line-height: 1.15;
+  letter-spacing: -0.02em;
 }
 
-main {
+main > h2 {
+  margin: 1rem 0 1.5rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+}
 
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  ul {
-    background-color: $theme-dark;
-    padding: $theme-text-padding-size;
-    margin-bottom: 0.5em;
+main h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-top: 2.5rem;
+}
+
+main h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-top: 1.8rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.3rem;
+
+  font-weight: 700;
+  text-decoration: none;
+
+  border: $theme-border;
+  background: $theme-paper;
+
+  transition: transform 0.15s, box-shadow 0.15s;
+
+  &:hover {
+    color: inherit;
+    transform: translate(-2px, -2px);
+    @include theme-shadow;
   }
 
-  ul {
-    padding-left: $theme-text-padding-size + 1.5rem;
+  &.primary {
+    color: white;
+    background: $theme-accent;
+    border-color: $theme-accent;
+    @include theme-shadow;
+
+    &:hover {
+      color: white;
+      box-shadow: ($theme-shadow-size + 2px) ($theme-shadow-size + 2px) 0 $theme-ink;
+    }
   }
 }
 
-#continue-reading {
-  padding: unset;
+body > footer {
+  // align with the centered content above
+  padding: 2rem max(#{$theme-gutter}, calc((100% - #{$theme-max-width}) / 2 + #{$theme-gutter}));
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  color: $theme-paper;
+  background: $theme-ink;
+
+  .icons {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1.2rem;
+    font-size: 1.3rem;
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: $theme-soft;
+    }
+  }
 }

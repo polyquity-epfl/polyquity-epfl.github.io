@@ -1,42 +1,104 @@
 @import "./_theme.scss";
 
 .events {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 2rem 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.events-empty {
+  margin: 0 0 2rem;
+  padding: 1.2rem 1.4rem;
+
+  border: $theme-border-size dashed $theme-accent;
+  background: $theme-soft-light;
+}
+
+.event-card {
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: column;
 
-  gap: 1em;
+  text-decoration: none;
 
-  .event-card {
-    flex: 1;
+  > .poster {
+    aspect-ratio: 1;
+    overflow: hidden;
 
-    padding: unset;
-    text-decoration: unset;
+    border: $theme-border;
+    background: $theme-soft;
 
-    >article {
-      height: 20rem;
-      min-width: 20em;
-      padding: 1rem;
+    transition: transform 0.15s, box-shadow 0.15s;
 
-      background-position: center;
-      background-size: cover;
-      background-color: $theme-dark;
+    > img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-      >h3 {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 1rem;
+    // no poster: show the brush logo on the soft purple
+    &.placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-        >:last-child {
-          flex: 1 1;
-          text-align: right;
-        }
+      > img {
+        width: 55%;
+        height: auto;
+        opacity: 0.25;
       }
+    }
+  }
 
-      >* {
-        background-color: $theme-dark;
-        padding: $theme-text-padding-size;
-      }
+  &:hover {
+    color: inherit;
+
+    > .poster {
+      transform: translate(-3px, -3px);
+      box-shadow: 6px 6px 0 $theme-accent;
+    }
+
+    h3 {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+    }
+  }
+
+  > .meta {
+    padding-top: 0.8rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    > * {
+      margin: 0;
+    }
+  }
+
+  .date {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $theme-accent-dark;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+
+  .summary,
+  .location {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: $theme-muted;
+
+    > p {
+      margin: 0;
     }
   }
 }

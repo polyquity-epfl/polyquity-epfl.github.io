@@ -1,6 +1,26 @@
-$theme-dark: #e8c1f4;
-$theme-light: #c625f7;
-$theme-contrast: black;
+// direction "Affiche": PolyQuity purple on paper, ink borders, offset shadows
+$theme-paper: #fbf7f2;
+$theme-ink: #1d1320;
+$theme-muted: #5a4a5e;
+$theme-accent: #c625f7;
+$theme-accent-dark: #a51ed0; // accent readable as text on paper
+$theme-soft: #e8c1f4;
+$theme-soft-light: #f3e3fa;
+
+$theme-font: "Archivo", system-ui, sans-serif;
 
 $theme-border-size: 2px;
+$theme-border: $theme-border-size solid $theme-ink;
+$theme-shadow-size: 4px;
+$theme-gutter: clamp(1rem, 4vw, 3rem);
+$theme-max-width: 72rem;
+
+// kept for compatibility with older rules
+$theme-dark: $theme-soft;
+$theme-light: $theme-accent;
+$theme-contrast: $theme-ink;
 $theme-text-padding-size: 0.5rem;
+
+@mixin theme-shadow($color: $theme-ink) {
+  box-shadow: $theme-shadow-size $theme-shadow-size 0 $color;
+}

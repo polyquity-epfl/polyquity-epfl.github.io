@@ -1,0 +1,114 @@
+@import "theme";
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  align-items: center;
+  gap: 2rem;
+
+  padding: 1.5rem 0 4rem;
+
+  > img {
+    width: min(100%, 22rem);
+    justify-self: center;
+  }
+
+  // the association summary is the hero statement
+  .statement p {
+    margin: 0;
+
+    font-size: clamp(1.9rem, 4.5vw, 3.4rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+  }
+
+  .ctas {
+    margin-top: 2rem;
+
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 0;
+
+    > img {
+      order: -1;
+      width: 10rem;
+    }
+  }
+}
+
+.section-head {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+
+  margin-bottom: 1.2rem;
+
+  h2 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 800;
+  }
+
+  a {
+    font-weight: 600;
+  }
+}
+
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.5rem;
+
+  padding-top: 1rem;
+
+  > a {
+    display: block;
+    padding: 1.6rem;
+
+    text-decoration: none;
+
+    border: $theme-border;
+    background: $theme-soft;
+
+    transition: transform 0.15s, box-shadow 0.15s;
+
+    &:nth-child(2) {
+      color: $theme-paper;
+      background: $theme-ink;
+    }
+
+    &:hover {
+      color: inherit;
+      transform: translate(-3px, -3px);
+      box-shadow: 6px 6px 0 $theme-accent;
+    }
+
+    &:nth-child(2):hover {
+      color: $theme-paper;
+    }
+
+    > i {
+      font-size: 1.6rem;
+    }
+
+    h3 {
+      margin: 0.5rem 0 0.6rem;
+      font-size: 1.4rem;
+      font-weight: 800;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}

@@ -1,42 +1,60 @@
 @import "theme";
 
-.links {
-  margin-top: 16px;
-
-  display: flex;
-  flex-flow: row;
-
-  font-size: x-large;
-
-  >a {
-    padding: 0.5em;
-    flex-grow: 1;
-    text-align: center;
-
-    border-left: solid $theme-border-size;
-
-    background: $theme-dark;
-
-    /* webkit likes to style links */
-    text-decoration: unset;
-  }
-
-  >a:first-child {
-    border-left: none;
-  }
-}
-
 main {
+  > p,
+  > ul,
+  > ol {
+    max-width: 42rem;
+  }
+
+  ul {
+    padding-left: 1.3rem;
+  }
+
+  li::marker {
+    color: $theme-accent;
+  }
+
   p:has(> img) {
     display: flex;
     justify-content: center;
 
-    background-color: unset;
-    padding: 0;
+    > img {
+      width: min(100%, 500px);
+      border: $theme-border;
+      @include theme-shadow($theme-accent);
+    }
+  }
+}
 
-    >img {
-      width: min(100% - 1rem, 500px);
-      border: calc($theme-text-padding-size) solid $theme-dark;
+.links {
+  margin-top: 2.5rem;
+
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+
+  > a {
+    width: 3.5rem;
+    height: 3.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.4rem;
+    text-decoration: none;
+
+    border: $theme-border;
+    background: $theme-paper;
+
+    transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+
+    &:hover {
+      color: white;
+      background: $theme-accent;
+      transform: translate(-2px, -2px);
+      @include theme-shadow;
     }
   }
 }
