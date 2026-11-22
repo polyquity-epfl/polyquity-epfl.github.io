@@ -8,16 +8,16 @@
       {% if ".svg" in filename %}
         <img src="{{ get_url(path=path) }}" alt="" loading="lazy" />
       {% else %}
-        {# posters are print-sized: serve square thumbnails, 2x for sharp screens #}
-        {% set small = resize_image(path=path, width=400, height=400, op="fill", format="webp", quality=80) %}
-        {% set large = resize_image(path=path, width=800, height=800, op="fill", format="webp", quality=80) %}
+        {# posters are print-sized: serve A4 thumbnails, 2x for sharp screens #}
+        {% set small = resize_image(path=path, width=400, height=566, op="fill", format="webp", quality=80) %}
+        {% set large = resize_image(path=path, width=800, height=1131, op="fill", format="webp", quality=80) %}
         <img src="{{ small.url }}"
              srcset="{{ small.url }} 400w,
                      {{ large.url }} 800w"
              sizes="(max-width: 600px) 100vw,
                     300px"
              width="400"
-             height="400"
+             height="566"
              alt=""
              loading="lazy"
              decoding="async" />

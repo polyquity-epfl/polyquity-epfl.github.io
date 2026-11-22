@@ -45,7 +45,7 @@
   text-decoration: none;
 
   > .poster {
-    aspect-ratio: 1;
+    aspect-ratio: 210 / 297; // most posters are A4; other images are cropped to fit
     overflow: hidden;
 
     border: $theme-border;
@@ -291,7 +291,7 @@
       border-bottom: $theme-border;
 
       > .poster {
-        flex: 0 0 5rem;
+        flex: 0 0 4.5rem;
       }
 
       > .meta {
