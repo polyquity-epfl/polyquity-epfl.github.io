@@ -1,5 +1,5 @@
 +++
-title = "Ressources Victimes"
+title = "Ressources victimes"
 
 template = "single-page.html"
 

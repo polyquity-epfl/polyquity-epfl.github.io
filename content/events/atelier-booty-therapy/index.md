@@ -1,11 +1,11 @@
 +++
-title = "Atelier booty therapy"
+title = "Atelier Booty Therapy"
 date = 2025-05-23
 
 [extra]
 start_time = 18:30:00
 end = 21:00:00
-location = "polydome"
+location = "Polydome"
 image = "poster.jpeg"
 +++
 

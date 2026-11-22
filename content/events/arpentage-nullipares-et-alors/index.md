@@ -8,7 +8,7 @@ start_time = 18:00:00
 location = "CM 013"
 +++
 
-"Nullipares et alors? être sans enfants"
+"Nullipares et alors? Être sans enfants"
 
 <!-- more -->
 

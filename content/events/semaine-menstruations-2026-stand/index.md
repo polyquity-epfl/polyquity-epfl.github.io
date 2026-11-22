@@ -5,7 +5,7 @@ date = 2026-05-04
 [extra]
 end = 2026-05-08
 image = "poster.jpeg"
-location = "devant le CO"
+location = "Devant le CO"
 +++
 
 Stand de sensibilisation et distribution de protections menstruelles

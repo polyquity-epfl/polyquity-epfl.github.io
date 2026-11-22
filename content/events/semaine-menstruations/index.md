@@ -31,7 +31,7 @@ Tous les jours à midi: stand d'information, simulateur de douleurs menstruelles
   get_url(path="@/events/distribution-protections-hygieniques/index.md")
 }})
 
-[Vendredi soir: atelier booty therapy]({{
+[Vendredi soir: atelier Booty Therapy]({{
   get_url(path="@/events/atelier-booty-therapy/index.md")
 }})
 

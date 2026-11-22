@@ -3,12 +3,12 @@ title = "Permanence de recrutement"
 date = 2025-09-18
 
 [extra]
-location = "devant SG"
+location = "Devant SG"
 image = "header.jpeg"
 end = 2025-09-19
 +++
 
-Rejoins Polyquity pendant la pause de midi!
+Rejoins PolyQuity pendant la pause de midi!
 
 <!-- more -->
 

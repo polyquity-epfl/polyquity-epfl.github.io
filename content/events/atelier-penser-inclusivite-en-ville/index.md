@@ -1,5 +1,5 @@
 +++
-title = "Atelier: Penser l'inclusivité en ville à partir de la cartographie"
+title = "Atelier: penser l'inclusivité en ville à partir de la cartographie"
 date = 2025-12-10
 
 [extra]

@@ -18,10 +18,10 @@ Avec distribution gratuite de cups et culottes menstruelles et customisation jeu
 
 Mardi 20h: [projection de "La Maison des femmes"](../projection-maison-des-femmes).
 
-Mercredi 18h: [lecture collective de "nullipares, et alors? être sans enfants"](
+Mercredi 18h: [lecture collective de "Nullipares, et alors? Être sans enfants"](
   ../arpentage-nullipares-et-alors
 )
 
-Vendredi 18h30: [atelier booty therapy](../semaine-menstruations-2026-booty-therapy)
+Vendredi 18h30: [atelier Booty Therapy](../semaine-menstruations-2026-booty-therapy)
 
 {{ <include_image page path="programme.jpeg" /> }}

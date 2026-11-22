@@ -8,7 +8,7 @@ image = "header.jpeg"
 start_time = 18:30:00
 +++
 
-Rejoins Polyquity!
+Rejoins PolyQuity!
 
 <!-- more -->
 

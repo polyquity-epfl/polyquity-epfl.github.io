@@ -26,7 +26,7 @@ pour partager leur expérience de manière anonyme.
 Depuis sa création, Paye ton EPFL a recueilli
 plus de 300 témoignages écrits et 5 témoignages vidéo,
 disponibles sur [Instagram](https://instagram.com/payetonepfl) et sur
-[la chaîne YouTube de Polyquity](https://www.youtube.com/@polyquityepfl154).
+[la chaîne YouTube de PolyQuity](https://www.youtube.com/@polyquityepfl154).
 
 Toute personne ayant subi ou été témoin de situations de harcèlement
 ou de discriminations peut témoigner en
