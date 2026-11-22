@@ -2,3 +2,6 @@
 
 /sass/fontawesome/
 /static/fontawesome/
+
+# zola image cache, regenerated on build
+/static/processed_images/

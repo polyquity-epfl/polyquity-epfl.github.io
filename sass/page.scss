@@ -15,12 +15,21 @@ main {
     color: $theme-accent;
   }
 
-  p:has(> img) {
+  p:has(> img),
+  p:has(> a > img) {
     display: flex;
     justify-content: center;
 
-    > img {
+    > img,
+    > a {
+      display: block;
       width: min(100%, 500px);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
       border: $theme-border;
       @include theme-shadow($theme-accent);
     }
